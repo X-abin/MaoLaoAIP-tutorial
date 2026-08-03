@@ -1,0 +1,132 @@
+:root {
+  --vp-c-brand-1: #0f766e;
+  --vp-c-brand-2: #0d9488;
+  --vp-c-brand-3: #14b8a6;
+  --vp-c-brand-soft: rgba(20, 184, 166, 0.12);
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: linear-gradient(120deg, #0f766e, #2563eb);
+  --vp-home-hero-image-background-image: linear-gradient(145deg, rgba(20, 184, 166, 0.2), rgba(37, 99, 235, 0.16));
+  --vp-home-hero-image-filter: blur(42px);
+}
+
+.VPHome .VPFeature {
+  border-radius: 8px;
+}
+
+.ml-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin: 24px 0;
+}
+
+.ml-card {
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 8px;
+  padding: 18px;
+  background: var(--vp-c-bg-soft);
+}
+
+.ml-card h3 {
+  margin: 0 0 8px;
+  font-size: 16px;
+}
+
+.ml-card p {
+  margin: 0;
+  color: var(--vp-c-text-2);
+}
+
+.ml-kpi {
+  font-size: 30px;
+  line-height: 1.1;
+  font-weight: 720;
+  color: var(--vp-c-brand-1);
+}
+
+.ml-muted {
+  color: var(--vp-c-text-2);
+}
+
+.ml-table-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 8px;
+}
+
+.ml-table {
+  width: 100%;
+  min-width: 840px;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.ml-table th,
+.ml-table td {
+  padding: 11px 12px;
+  border-bottom: 1px solid var(--vp-c-divider);
+  vertical-align: top;
+  text-align: left;
+}
+
+.ml-table th {
+  white-space: nowrap;
+  color: var(--vp-c-text-1);
+  background: var(--vp-c-bg-soft);
+}
+
+.ml-table tr:last-child td {
+  border-bottom: 0;
+}
+
+.ml-chip-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.ml-chip {
+  display: inline-flex;
+  align-items: center;
+  min-height: 24px;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 999px;
+  padding: 2px 8px;
+  color: var(--vp-c-text-2);
+  background: var(--vp-c-bg);
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.ml-toolbar {
+  display: grid;
+  grid-template-columns: minmax(180px, 1fr) 180px;
+  gap: 12px;
+  margin: 18px 0;
+}
+
+.ml-input,
+.ml-select {
+  width: 100%;
+  min-height: 38px;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 8px;
+  padding: 0 12px;
+  color: var(--vp-c-text-1);
+  background: var(--vp-c-bg);
+}
+
+.ml-callout {
+  border-left: 4px solid var(--vp-c-brand-1);
+  padding: 12px 14px;
+  margin: 18px 0;
+  background: var(--vp-c-brand-soft);
+  border-radius: 0 8px 8px 0;
+}
+
+@media (max-width: 760px) {
+  .ml-grid,
+  .ml-toolbar {
+    grid-template-columns: 1fr;
+  }
+}

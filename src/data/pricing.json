@@ -1,0 +1,636 @@
+{
+  "success": true,
+  "sourceUrl": "https://maolaoapi.com/api/pricing",
+  "resolvedUrl": "https://api.maolaoapi.com/api/pricing",
+  "generatedAt": "2026-08-03T11:49:59.214Z",
+  "pricingVersion": "e89fe67d8363d95ef8e8c19715be2e4b",
+  "groupNames": {
+    "381": "Grok-Super",
+    "CC-KIRO": "CC-Power  |  低价CC",
+    "CC-Max": "CC-MAX",
+    "Codex-Hack": "Codex-Hack  |  未拦截敏感词",
+    "Codex-Plus": "Codex-Basic  |  高性价比",
+    "Codex-Pro": "Codex-Official  | 稳定正价渠道",
+    "Codex-Team": "Codex-福利组",
+    "Deepseek官转": "Deepseek官转",
+    "Deepseek转Anthropic": "Deepseek转Anthropic",
+    "GPT生图4K渠道": "GPT生图4K渠道",
+    "GPT生图Azure渠道": "GPT生图Azure渠道",
+    "GPT生图Codex反代渠道": "GPT生图Codex反代渠道",
+    "Svip": "Svip",
+    "X-福利组": "X-福利组",
+    "codex-pro特价": "Codex-Value  |  价格与性能综合",
+    "default": "default",
+    "group_1": "Grok-Basic",
+    "group_2": "生图视频专用分组",
+    "group_3": "CC-MAX-U |  稳定不限客户端",
+    "group_4": "CC-MAX-CLI  |  稳定仅 Claude Code",
+    "group_5": "CC-MAX-BUG",
+    "vip": "vip",
+    "中转代理": "中转代理",
+    "国模折扣": "国模折扣",
+    "并发限制10": "并发限制10"
+  },
+  "groupRatio": {
+    "CC-KIRO": 0.2,
+    "CC-Max": 2,
+    "Codex-Hack": 0.2,
+    "Codex-Plus": 0.15,
+    "Codex-Pro": 0.3,
+    "Deepseek官转": 1.2,
+    "Deepseek转Anthropic": 1.2,
+    "codex-pro特价": 0.2,
+    "group_2": 1,
+    "group_3": 1.5,
+    "group_4": 1.3,
+    "国模折扣": 0.5
+  },
+  "usableGroup": {
+    "CC-KIRO": "CC-KIRO |  AWS与Anthropic合作在Kiro中的渠道，非满血。",
+    "CC-Max": "稳定 | 不限客户端",
+    "Codex-Hack": "Codex-Hack  |  破限制用这个分组，本站未拦截敏感词",
+    "Codex-Plus": "Codex-Basic    |  非纯Pro，主要为低价日抛渠道，尽可能保证能用",
+    "Codex-Pro": "Codex-Official  | 稳定正价Pro20x分组  | 禁止逆向、渗透、蒸馏、R18等高风险对话",
+    "Deepseek官转": "量大建议去用官方的，官key非逆向渠道",
+    "Deepseek转Anthropic": "量大建议去用官方的，官key非逆向渠道",
+    "auto": "自动选择最佳可用分组，失败时按配置顺序切换",
+    "codex-pro特价": "Codex-Value  |  纯Pro高性价比 | 没有Codex-Official 稳定",
+    "group_2": "生图视频专用",
+    "group_3": "稳定 | 不限客户端",
+    "group_4": "稳定 | 仅 Claude Code使用",
+    "国模折扣": "国产模型满血折扣"
+  },
+  "supportedEndpoint": {
+    "anthropic": {
+      "path": "/v1/messages",
+      "method": "POST"
+    },
+    "gemini": {
+      "path": "/v1beta/models/{model}:generateContent",
+      "method": "POST"
+    },
+    "image-generation": {
+      "path": "/v1/images/generations",
+      "method": "POST"
+    },
+    "jina-rerank": {
+      "path": "/v1/rerank",
+      "method": "POST"
+    },
+    "openai": {
+      "path": "/v1/chat/completions",
+      "method": "POST"
+    },
+    "openai-image": {
+      "path": "/v1/images/generations",
+      "method": "POST"
+    },
+    "openai-image-edit": {
+      "path": "/v1/images/edits",
+      "method": "POST"
+    },
+    "openai-response": {
+      "path": "/v1/responses",
+      "method": "POST"
+    },
+    "openai-response-compact": {
+      "path": "/v1/responses/compact",
+      "method": "POST"
+    },
+    "通用异步路径": {
+      "path": "/v1/images/tasks",
+      "method": "POST"
+    }
+  },
+  "vendors": [
+    {
+      "id": 2,
+      "name": "Anthropic",
+      "icon": "Claude.Color"
+    },
+    {
+      "id": 4,
+      "name": "Google",
+      "icon": "Gemini.Color"
+    },
+    {
+      "id": 5,
+      "name": "xAI",
+      "icon": "Grok"
+    },
+    {
+      "id": 6,
+      "name": "DeepSeek",
+      "icon": "DeepSeek.Color"
+    },
+    {
+      "id": 7,
+      "name": "智谱",
+      "icon": "Zhipu.Color"
+    },
+    {
+      "id": 1,
+      "name": "OpenAI",
+      "icon": "OpenAI"
+    }
+  ],
+  "autoGroups": [
+    "CC-KIRO",
+    "group_3",
+    "Codex-Plus",
+    "Codex-Pro",
+    "国模折扣",
+    "Deepseek转Anthropic",
+    "Deepseek官转",
+    "group_2"
+  ],
+  "models": [
+    {
+      "name": "claude-fable-5",
+      "description": "Anthropic 新一代高质量长文本与创意写作模型，适合小说叙事、角色塑造、世界观扩展与高一致性内容生成。",
+      "vendorId": 2,
+      "tags": "anthropic,claude,fable,长文本,创作,叙事",
+      "quotaType": 0,
+      "modelRatio": 5,
+      "modelPrice": 0,
+      "modelPriceUnit": "",
+      "completionRatio": 5,
+      "cacheRatio": 0.1,
+      "createCacheRatio": 1,
+      "enableGroups": [
+        "CC-Max",
+        "CC-KIRO",
+        "group_4",
+        "group_3"
+      ],
+      "supportedEndpointTypes": [
+        "openai",
+        "anthropic"
+      ],
+      "billingMode": "",
+      "billingExpression": ""
+    },
+    {
+      "name": "claude-haiku-4-5-20251001",
+      "description": "Anthropic 轻量高性价比模型，适合快速响应、批量任务与低成本文本处理场景。",
+      "vendorId": 2,
+      "tags": "anthropic,claude,haiku,轻量,低成本,快速响应",
+      "quotaType": 0,
+      "modelRatio": 0.5,
+      "modelPrice": 0,
+      "modelPriceUnit": "",
+      "completionRatio": 5,
+      "cacheRatio": 0.1,
+      "createCacheRatio": 1.25,
+      "enableGroups": [
+        "group_4",
+        "group_3",
+        "CC-Max",
+        "CC-KIRO"
+      ],
+      "supportedEndpointTypes": [
+        "openai",
+        "anthropic"
+      ],
+      "billingMode": "",
+      "billingExpression": ""
+    },
+    {
+      "name": "claude-opus-4-6",
+      "description": "Anthropic 旗舰推理模型，适合复杂分析、长上下文推理与高质量内容生成场景。",
+      "vendorId": 2,
+      "tags": "anthropic,claude,opus,旗舰,推理",
+      "quotaType": 0,
+      "modelRatio": 2.5,
+      "modelPrice": 0,
+      "modelPriceUnit": "",
+      "completionRatio": 5,
+      "cacheRatio": 0.1,
+      "createCacheRatio": 1.25,
+      "enableGroups": [
+        "group_4",
+        "group_3",
+        "CC-Max",
+        "CC-KIRO"
+      ],
+      "supportedEndpointTypes": [
+        "openai",
+        "anthropic"
+      ],
+      "billingMode": "",
+      "billingExpression": ""
+    },
+    {
+      "name": "claude-opus-4-7",
+      "description": "Anthropic 旗舰推理模型，适合复杂分析、长上下文推理与高质量内容生成场景。",
+      "vendorId": 2,
+      "tags": "anthropic,claude,opus,旗舰,推理",
+      "quotaType": 0,
+      "modelRatio": 2.5,
+      "modelPrice": 0,
+      "modelPriceUnit": "",
+      "completionRatio": 5,
+      "cacheRatio": 0.1,
+      "createCacheRatio": 1.25,
+      "enableGroups": [
+        "group_4",
+        "group_3",
+        "CC-Max",
+        "CC-KIRO"
+      ],
+      "supportedEndpointTypes": [
+        "openai",
+        "anthropic"
+      ],
+      "billingMode": "",
+      "billingExpression": ""
+    },
+    {
+      "name": "claude-opus-4-8",
+      "description": "Anthropic 旗舰推理模型，适合复杂分析、长上下文推理与高质量内容生成场景。",
+      "vendorId": 2,
+      "tags": "anthropic,claude,opus,旗舰,推理",
+      "quotaType": 0,
+      "modelRatio": 2.5,
+      "modelPrice": 0,
+      "modelPriceUnit": "",
+      "completionRatio": 5,
+      "cacheRatio": 0.1,
+      "createCacheRatio": null,
+      "enableGroups": [
+        "group_4",
+        "group_3",
+        "CC-Max",
+        "CC-KIRO"
+      ],
+      "supportedEndpointTypes": [
+        "openai",
+        "anthropic"
+      ],
+      "billingMode": "",
+      "billingExpression": ""
+    },
+    {
+      "name": "claude-opus-5",
+      "description": "",
+      "vendorId": 2,
+      "tags": "",
+      "quotaType": 0,
+      "modelRatio": 2.5,
+      "modelPrice": 0,
+      "modelPriceUnit": "",
+      "completionRatio": 5,
+      "cacheRatio": 0.1,
+      "createCacheRatio": 1.25,
+      "enableGroups": [
+        "group_4",
+        "group_3",
+        "CC-Max",
+        "CC-KIRO"
+      ],
+      "supportedEndpointTypes": [
+        "anthropic",
+        "openai"
+      ],
+      "billingMode": "",
+      "billingExpression": ""
+    },
+    {
+      "name": "claude-sonnet-4-6",
+      "description": "Anthropic 通用高性能模型，适合稳定对话、代码协作与中高复杂度推理场景。",
+      "vendorId": 2,
+      "tags": "anthropic,claude,sonnet,通用,代码,推理",
+      "quotaType": 0,
+      "modelRatio": 1.5,
+      "modelPrice": 0,
+      "modelPriceUnit": "",
+      "completionRatio": 5,
+      "cacheRatio": 0.1,
+      "createCacheRatio": 1.25,
+      "enableGroups": [
+        "group_4",
+        "group_3",
+        "CC-Max",
+        "CC-KIRO"
+      ],
+      "supportedEndpointTypes": [
+        "openai",
+        "anthropic"
+      ],
+      "billingMode": "",
+      "billingExpression": ""
+    },
+    {
+      "name": "claude-sonnet-5",
+      "description": "Anthropic 新一代 Sonnet 高性能模型，适合稳定对话、代码协作与复杂推理场景。",
+      "vendorId": 2,
+      "tags": "anthropic,claude,sonnet,通用,代码,推理",
+      "quotaType": 0,
+      "modelRatio": 1,
+      "modelPrice": 0,
+      "modelPriceUnit": "",
+      "completionRatio": 5,
+      "cacheRatio": 0.1,
+      "createCacheRatio": null,
+      "enableGroups": [
+        "group_4",
+        "group_3",
+        "CC-Max",
+        "CC-KIRO"
+      ],
+      "supportedEndpointTypes": [
+        "openai",
+        "anthropic"
+      ],
+      "billingMode": "",
+      "billingExpression": ""
+    },
+    {
+      "name": "codex-auto-review",
+      "description": "适配 Codex 自动审批功能的模型别名，实际请求会映射到 gpt-5.5。",
+      "vendorId": 1,
+      "tags": "openai,codex,自动审批,模型映射",
+      "quotaType": 0,
+      "modelRatio": 2.5,
+      "modelPrice": 0,
+      "modelPriceUnit": "",
+      "completionRatio": 30,
+      "cacheRatio": 0.1,
+      "createCacheRatio": null,
+      "enableGroups": [
+        "Codex-Pro",
+        "codex-pro特价",
+        "Codex-Hack",
+        "Codex-Plus"
+      ],
+      "supportedEndpointTypes": [
+        "openai",
+        "anthropic"
+      ],
+      "billingMode": "",
+      "billingExpression": ""
+    },
+    {
+      "name": "deepseek-v4-flash",
+      "description": "DeepSeek V4 Flash 快速模型，适合低延迟对话、批量任务与高性价比文本生成场景。",
+      "vendorId": 6,
+      "tags": "deepseek,v4,flash,快速,低延迟,文本生成",
+      "quotaType": 0,
+      "modelRatio": 0.5,
+      "modelPrice": 0,
+      "modelPriceUnit": "",
+      "completionRatio": 2,
+      "cacheRatio": 0.02,
+      "createCacheRatio": null,
+      "enableGroups": [
+        "Deepseek官转"
+      ],
+      "supportedEndpointTypes": [
+        "openai"
+      ],
+      "billingMode": "",
+      "billingExpression": ""
+    },
+    {
+      "name": "deepseek-v4-pro",
+      "description": "DeepSeek V4 Pro 高性能模型，适合复杂推理、代码与高质量文本生成场景。",
+      "vendorId": 6,
+      "tags": "deepseek,v4,pro,推理,代码,文本生成",
+      "quotaType": 0,
+      "modelRatio": 1.5,
+      "modelPrice": 0,
+      "modelPriceUnit": "",
+      "completionRatio": 2,
+      "cacheRatio": 0.333333333332,
+      "createCacheRatio": null,
+      "enableGroups": [
+        "Deepseek官转"
+      ],
+      "supportedEndpointTypes": [
+        "openai"
+      ],
+      "billingMode": "",
+      "billingExpression": ""
+    },
+    {
+      "name": "gpt-5.3-codex-spark",
+      "description": "OpenAI 面向编程与代码任务的轻快型 Codex 模型，适合代码补全、代理执行与工程场景。",
+      "vendorId": 1,
+      "tags": "openai,codex,代码,编程",
+      "quotaType": 0,
+      "modelRatio": 0.875,
+      "modelPrice": 0,
+      "modelPriceUnit": "",
+      "completionRatio": 8,
+      "cacheRatio": 0.097142857143,
+      "createCacheRatio": null,
+      "enableGroups": [
+        "Codex-Hack",
+        "Codex-Pro",
+        "codex-pro特价"
+      ],
+      "supportedEndpointTypes": [
+        "openai",
+        "anthropic"
+      ],
+      "billingMode": "",
+      "billingExpression": ""
+    },
+    {
+      "name": "gpt-5.4",
+      "description": "OpenAI 最新旗舰通用大模型，适合复杂推理、长上下文、多场景高质量文本生成。",
+      "vendorId": 1,
+      "tags": "openai,旗舰,通用,推理",
+      "quotaType": 0,
+      "modelRatio": 1.25,
+      "modelPrice": 0,
+      "modelPriceUnit": "",
+      "completionRatio": 6,
+      "cacheRatio": 0.1,
+      "createCacheRatio": null,
+      "enableGroups": [
+        "Codex-Pro",
+        "codex-pro特价",
+        "Codex-Hack",
+        "Codex-Plus"
+      ],
+      "supportedEndpointTypes": [
+        "openai",
+        "anthropic"
+      ],
+      "billingMode": "",
+      "billingExpression": ""
+    },
+    {
+      "name": "gpt-5.4-mini",
+      "description": "OpenAI 轻量通用模型，适合低成本高频调用、基础推理与常规文本生成场景。",
+      "vendorId": 1,
+      "tags": "openai,mini,轻量,通用",
+      "quotaType": 0,
+      "modelRatio": 0.375,
+      "modelPrice": 0,
+      "modelPriceUnit": "",
+      "completionRatio": 6,
+      "cacheRatio": 0.093333333333,
+      "createCacheRatio": null,
+      "enableGroups": [
+        "Codex-Pro",
+        "codex-pro特价",
+        "Codex-Hack",
+        "Codex-Plus"
+      ],
+      "supportedEndpointTypes": [
+        "anthropic",
+        "openai"
+      ],
+      "billingMode": "",
+      "billingExpression": ""
+    },
+    {
+      "name": "gpt-5.5",
+      "description": "OpenAI 新一代旗舰通用大模型，适合复杂推理、长上下文、多场景高质量文本生成。",
+      "vendorId": 1,
+      "tags": "openai,旗舰,通用,推理",
+      "quotaType": 0,
+      "modelRatio": 2.5,
+      "modelPrice": 0,
+      "modelPriceUnit": "",
+      "completionRatio": 6,
+      "cacheRatio": 0.1,
+      "createCacheRatio": null,
+      "enableGroups": [
+        "Codex-Plus",
+        "Codex-Pro",
+        "codex-pro特价",
+        "Codex-Hack"
+      ],
+      "supportedEndpointTypes": [
+        "openai",
+        "anthropic"
+      ],
+      "billingMode": "",
+      "billingExpression": ""
+    },
+    {
+      "name": "gpt-5.6-luna",
+      "description": "",
+      "vendorId": 1,
+      "tags": "",
+      "quotaType": 0,
+      "modelRatio": 37.5,
+      "modelPrice": 0,
+      "modelPriceUnit": "",
+      "completionRatio": 8,
+      "cacheRatio": null,
+      "createCacheRatio": null,
+      "enableGroups": [
+        "codex-pro特价",
+        "Codex-Pro",
+        "Codex-Hack",
+        "Codex-Plus"
+      ],
+      "supportedEndpointTypes": [
+        "openai",
+        "openai-response"
+      ],
+      "billingMode": "tiered_expr",
+      "billingExpression": "len < 272000 ? tier(\"Short\", p * 0.2 + c * 1.2 + cr * 0.02 + cc * 0.25) : tier(\"Long\", p * 0.4 + c * 1.8 + cr * 0.04 + cc * 0.5)"
+    },
+    {
+      "name": "gpt-5.6-sol",
+      "description": "",
+      "vendorId": 1,
+      "tags": "",
+      "quotaType": 0,
+      "modelRatio": 37.5,
+      "modelPrice": 0,
+      "modelPriceUnit": "",
+      "completionRatio": 8,
+      "cacheRatio": null,
+      "createCacheRatio": null,
+      "enableGroups": [
+        "Codex-Pro",
+        "codex-pro特价",
+        "Codex-Hack",
+        "Codex-Plus"
+      ],
+      "supportedEndpointTypes": [
+        "openai",
+        "openai-response"
+      ],
+      "billingMode": "tiered_expr",
+      "billingExpression": "len < 272000 ? tier(\"Short\", p * 5 + c * 30 + cr * 0.5 + cc * 6.25) : tier(\"Long\", p * 10 + c * 45 + cr * 1 + cc * 12.5)"
+    },
+    {
+      "name": "gpt-5.6-terra",
+      "description": "",
+      "vendorId": 1,
+      "tags": "",
+      "quotaType": 0,
+      "modelRatio": 37.5,
+      "modelPrice": 0,
+      "modelPriceUnit": "",
+      "completionRatio": 8,
+      "cacheRatio": null,
+      "createCacheRatio": null,
+      "enableGroups": [
+        "Codex-Plus",
+        "codex-pro特价",
+        "Codex-Pro",
+        "Codex-Hack"
+      ],
+      "supportedEndpointTypes": [
+        "openai",
+        "openai-response"
+      ],
+      "billingMode": "tiered_expr",
+      "billingExpression": "len < 272000 ? tier(\"Short\", p * 2 + c * 12 + cr * 0.2 + cc * 2.5) : tier(\"Long\", p * 4 + c * 18 + cr * 0.4 + cc * 5)"
+    },
+    {
+      "name": "gpt-image-2",
+      "description": "OpenAI 图像生成模型，适合高质量图片生成场景。",
+      "vendorId": 1,
+      "tags": "openai,image,绘图,生成",
+      "quotaType": 1,
+      "modelRatio": 0,
+      "modelPrice": 0.06,
+      "modelPriceUnit": "request",
+      "completionRatio": 0,
+      "cacheRatio": null,
+      "createCacheRatio": null,
+      "enableGroups": [
+        "group_2"
+      ],
+      "supportedEndpointTypes": [
+        "openai-image",
+        "通用异步路径",
+        "openai-image-edit"
+      ],
+      "billingMode": "",
+      "billingExpression": ""
+    },
+    {
+      "name": "gpt-image-2-4k",
+      "description": "",
+      "vendorId": 1,
+      "tags": "",
+      "quotaType": 1,
+      "modelRatio": 0,
+      "modelPrice": 0.1,
+      "modelPriceUnit": "request",
+      "completionRatio": 0,
+      "cacheRatio": null,
+      "createCacheRatio": null,
+      "enableGroups": [
+        "group_2"
+      ],
+      "supportedEndpointTypes": [
+        "image-generation",
+        "openai",
+        "openai-response"
+      ],
+      "billingMode": "",
+      "billingExpression": ""
+    }
+  ]
+}
