@@ -195,6 +195,7 @@ body {
   color: var(--vp-c-text-1);
   background: var(--vp-c-bg-soft);
   text-decoration: none;
+  cursor: pointer;
   transition: border-color 0.2s ease, background 0.2s ease, transform 0.2s ease;
 }
 
@@ -202,6 +203,17 @@ body {
   border-color: var(--vp-c-brand-2);
   background: var(--vp-c-brand-soft);
   transform: translateY(-2px);
+}
+
+.ml-route-card:focus-visible {
+  outline: 3px solid var(--vp-c-brand-soft);
+  outline-offset: 3px;
+  border-color: var(--vp-c-brand-2);
+}
+
+.ml-route-card:hover span,
+.ml-route-card:focus-visible span {
+  color: var(--vp-c-brand-1);
 }
 
 .ml-route-card span {

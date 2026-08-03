@@ -1,4 +1,5 @@
 <script setup>
+import { withBase } from "vitepress";
 import status from "../../../../src/data/status.json";
 import summary from "../../../../src/data/summary.json";
 
@@ -57,7 +58,7 @@ const routes = [
   </section>
 
   <section class="ml-route-grid" aria-label="推荐阅读路径">
-    <a v-for="route in routes" :key="route.link" class="ml-route-card" :href="route.link">
+    <a v-for="route in routes" :key="route.link" class="ml-route-card" :href="withBase(route.link)">
       <span>{{ route.title }}</span>
       <p>{{ route.text }}</p>
     </a>
