@@ -5,6 +5,9 @@ hero:
   name: MaoLaoAIP教程
   text: MaoLao API 新手使用文档
   tagline: 从注册、创建 API Key、选择模型到理解计费额度，按真实项目方式整理的一站式教程。
+  image:
+    src: https://i3.ipix.ink/yh/2026/04/20/NgletX.png
+    alt: MaoLao API
   actions:
     - theme: brand
       text: 快速开始
