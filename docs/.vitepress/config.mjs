@@ -22,6 +22,8 @@ export default defineConfig({
       { text: "API Key", link: "/api-key" },
       { text: "模型与价格", link: "/models-pricing" },
       { text: "计费与额度", link: "/billing-quota" },
+      { text: "工具接入", link: "/tools/" },
+      { text: "账户与订阅", link: "/account/" },
     ],
     sidebar: [
       {
@@ -32,6 +34,34 @@ export default defineConfig({
           { text: "创建 API Key", link: "/api-key" },
           { text: "模型与价格", link: "/models-pricing" },
           { text: "计费与额度", link: "/billing-quota" },
+        ],
+      },
+      {
+        text: "工具接入",
+        items: [
+          { text: "OpenAI Compatible", link: "/tools/openai-compatible" },
+          { text: "Cursor", link: "/tools/cursor" },
+          { text: "Claude Code", link: "/tools/claude-code" },
+          { text: "Codex CLI", link: "/tools/codex-cli" },
+          { text: "Cherry Studio", link: "/tools/cherry-studio" },
+          { text: "Chatbox", link: "/tools/chatbox" },
+          { text: "Open WebUI", link: "/tools/open-webui" },
+          { text: "CodeBuddy", link: "/tools/codebuddy" },
+          { text: "Trae", link: "/tools/trae" },
+          { text: "CC Switch", link: "/tools/cc-switch" },
+          { text: "Hermes / OpenClaw 403 代理", link: "/tools/hermes-openclaw-403" },
+          { text: "LangChain / SDK", link: "/tools/langchain-sdk" },
+          { text: "常见问题排查", link: "/tools/troubleshooting" },
+        ],
+      },
+      {
+        text: "账户与订阅",
+        items: [
+          { text: "账户概览", link: "/account/" },
+          { text: "充值余额", link: "/account/recharge" },
+          { text: "订阅套餐选择", link: "/account/subscription-plans" },
+          { text: "订单与发票", link: "/account/orders-invoices" },
+          { text: "账户问题排查", link: "/account/troubleshooting" },
         ],
       },
       {
