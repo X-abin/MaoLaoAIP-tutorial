@@ -49,6 +49,11 @@ export default defineConfig({
           { text: "CodeBuddy", link: "/tools/codebuddy" },
           { text: "Trae", link: "/tools/trae" },
           { text: "CC Switch", link: "/tools/cc-switch" },
+        ],
+      },
+      {
+        text: "进阶与排查",
+        items: [
           { text: "Hermes / OpenClaw 403 代理", link: "/tools/hermes-openclaw-403" },
           { text: "LangChain / SDK", link: "/tools/langchain-sdk" },
           { text: "常见问题排查", link: "/tools/troubleshooting" },

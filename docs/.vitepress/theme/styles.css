@@ -1,4 +1,4 @@
-:root {
+﻿:root {
   --vp-c-brand-1: #0f766e;
   --vp-c-brand-2: #0891b2;
   --vp-c-brand-3: #14b8a6;
@@ -115,83 +115,83 @@ body {
   place-items: center;
   width: 18px;
   height: 18px;
-  border: 1px solid var(--ml-border);
-  border-radius: 5px;
+  border: 0;
+  border-radius: 4px;
   color: #fff;
-  background: #64748b;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
   font-size: 10px;
   font-weight: 800;
   line-height: 1;
   flex: 0 0 18px;
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.26) inset;
 }
 
 .VPSidebarItem.level-1 .link[href*="/tools/openai-compatible"] .text::before {
-  content: "AI";
-  background: linear-gradient(135deg, #111827, #10a37f);
+  content: "";
+  background-image: url("/tool-icons/openai.svg");
 }
 
 .VPSidebarItem.level-1 .link[href*="/tools/cursor"] .text::before {
-  content: "C";
-  background: linear-gradient(135deg, #111827, #3b82f6);
+  content: "";
+  background-image: url("/tool-icons/cursor.svg");
 }
 
 .VPSidebarItem.level-1 .link[href*="/tools/claude-code"] .text::before {
-  content: "C";
-  background: linear-gradient(135deg, #d97706, #7c2d12);
+  content: "";
+  background-image: url("/tool-icons/claude.svg");
 }
 
 .VPSidebarItem.level-1 .link[href*="/tools/codex-cli"] .text::before {
-  content: "⌘";
-  background: linear-gradient(135deg, #0f172a, #0f766e);
+  content: "";
+  background-image: url("/tool-icons/codex.svg");
 }
 
 .VPSidebarItem.level-1 .link[href*="/tools/cherry-studio"] .text::before {
-  content: "CS";
-  background: linear-gradient(135deg, #e11d48, #f97316);
+  content: "";
+  background-image: url("/tool-icons/cherry-studio.svg");
 }
 
 .VPSidebarItem.level-1 .link[href*="/tools/chatbox"] .text::before {
-  content: "💬";
-  background: linear-gradient(135deg, #2563eb, #06b6d4);
-  font-size: 11px;
+  content: "";
+  background-image: url("/tool-icons/chatbox.svg");
 }
 
 .VPSidebarItem.level-1 .link[href*="/tools/open-webui"] .text::before {
-  content: "W";
-  background: linear-gradient(135deg, #16a34a, #0891b2);
+  content: "";
+  background-image: url("/tool-icons/open-webui.svg");
 }
 
 .VPSidebarItem.level-1 .link[href*="/tools/codebuddy"] .text::before {
-  content: "</>";
-  background: linear-gradient(135deg, #4f46e5, #0f766e);
-  font-size: 8px;
+  content: "";
+  background-image: url("/tool-icons/codebuddy.svg");
 }
 
 .VPSidebarItem.level-1 .link[href*="/tools/trae"] .text::before {
-  content: "T";
-  background: linear-gradient(135deg, #7c3aed, #db2777);
+  content: "";
+  background-image: url("/tool-icons/trae.svg");
 }
 
 .VPSidebarItem.level-1 .link[href*="/tools/cc-switch"] .text::before {
-  content: "CC";
-  background: linear-gradient(135deg, #0f766e, #14b8a6);
+  content: "";
+  background-image: url("/tool-icons/cc-switch.png");
 }
 
 .VPSidebarItem.level-1 .link[href*="/tools/hermes-openclaw-403"] .text::before {
-  content: "403";
-  background: linear-gradient(135deg, #dc2626, #f59e0b);
+  content: "";
+  background-image: url("/tool-icons/403.svg");
   font-size: 8px;
 }
 
 .VPSidebarItem.level-1 .link[href*="/tools/langchain-sdk"] .text::before {
-  content: "LC";
-  background: linear-gradient(135deg, #0f172a, #65a30d);
+  content: "";
+  background-image: url("/tool-icons/langchain.svg");
 }
 
 .VPSidebarItem.level-1 .link[href*="/tools/troubleshooting"] .text::before {
-  content: "?";
-  background: linear-gradient(135deg, #475569, #0891b2);
+  content: "";
+  background-image: url("/tool-icons/help.svg");
 }
 
 .ml-grid {
@@ -447,3 +447,4 @@ body {
     font-size: 16px;
   }
 }
+
