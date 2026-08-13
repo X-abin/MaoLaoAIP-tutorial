@@ -103,6 +103,97 @@ body {
   background: var(--vp-c-brand-soft);
 }
 
+.VPSidebarItem.level-1 .link[href*="/tools/"] .text {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.VPSidebarItem.level-1 .link[href*="/tools/"] .text::before {
+  display: inline-grid;
+  place-items: center;
+  width: 18px;
+  height: 18px;
+  border: 1px solid var(--ml-border);
+  border-radius: 5px;
+  color: #fff;
+  background: #64748b;
+  font-size: 10px;
+  font-weight: 800;
+  line-height: 1;
+  flex: 0 0 18px;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.26) inset;
+}
+
+.VPSidebarItem.level-1 .link[href*="/tools/openai-compatible"] .text::before {
+  content: "AI";
+  background: linear-gradient(135deg, #111827, #10a37f);
+}
+
+.VPSidebarItem.level-1 .link[href*="/tools/cursor"] .text::before {
+  content: "C";
+  background: linear-gradient(135deg, #111827, #3b82f6);
+}
+
+.VPSidebarItem.level-1 .link[href*="/tools/claude-code"] .text::before {
+  content: "C";
+  background: linear-gradient(135deg, #d97706, #7c2d12);
+}
+
+.VPSidebarItem.level-1 .link[href*="/tools/codex-cli"] .text::before {
+  content: "⌘";
+  background: linear-gradient(135deg, #0f172a, #0f766e);
+}
+
+.VPSidebarItem.level-1 .link[href*="/tools/cherry-studio"] .text::before {
+  content: "CS";
+  background: linear-gradient(135deg, #e11d48, #f97316);
+}
+
+.VPSidebarItem.level-1 .link[href*="/tools/chatbox"] .text::before {
+  content: "💬";
+  background: linear-gradient(135deg, #2563eb, #06b6d4);
+  font-size: 11px;
+}
+
+.VPSidebarItem.level-1 .link[href*="/tools/open-webui"] .text::before {
+  content: "W";
+  background: linear-gradient(135deg, #16a34a, #0891b2);
+}
+
+.VPSidebarItem.level-1 .link[href*="/tools/codebuddy"] .text::before {
+  content: "</>";
+  background: linear-gradient(135deg, #4f46e5, #0f766e);
+  font-size: 8px;
+}
+
+.VPSidebarItem.level-1 .link[href*="/tools/trae"] .text::before {
+  content: "T";
+  background: linear-gradient(135deg, #7c3aed, #db2777);
+}
+
+.VPSidebarItem.level-1 .link[href*="/tools/cc-switch"] .text::before {
+  content: "CC";
+  background: linear-gradient(135deg, #0f766e, #14b8a6);
+}
+
+.VPSidebarItem.level-1 .link[href*="/tools/hermes-openclaw-403"] .text::before {
+  content: "403";
+  background: linear-gradient(135deg, #dc2626, #f59e0b);
+  font-size: 8px;
+}
+
+.VPSidebarItem.level-1 .link[href*="/tools/langchain-sdk"] .text::before {
+  content: "LC";
+  background: linear-gradient(135deg, #0f172a, #65a30d);
+}
+
+.VPSidebarItem.level-1 .link[href*="/tools/troubleshooting"] .text::before {
+  content: "?";
+  background: linear-gradient(135deg, #475569, #0891b2);
+}
+
 .ml-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
