@@ -135,12 +135,12 @@ body {
 
 .VPSidebarItem.level-1 .link[href*="/tools/cursor"] .text::before {
   content: "";
-  background-image: url("/tool-icons/cursor.svg");
+  background-image: url("/tool-icons/cursor.ico");
 }
 
 .VPSidebarItem.level-1 .link[href*="/tools/claude-code"] .text::before {
   content: "";
-  background-image: url("/tool-icons/claude.svg");
+  background-image: url("/tool-icons/claude.ico");
 }
 
 .VPSidebarItem.level-1 .link[href*="/tools/codex-cli"] .text::before {
@@ -150,17 +150,17 @@ body {
 
 .VPSidebarItem.level-1 .link[href*="/tools/cherry-studio"] .text::before {
   content: "";
-  background-image: url("/tool-icons/cherry-studio.svg");
+  background-image: url("/tool-icons/cherry.png");
 }
 
 .VPSidebarItem.level-1 .link[href*="/tools/chatbox"] .text::before {
   content: "";
-  background-image: url("/tool-icons/chatbox.svg");
+  background-image: url("/tool-icons/chatbox.ico");
 }
 
 .VPSidebarItem.level-1 .link[href*="/tools/open-webui"] .text::before {
   content: "";
-  background-image: url("/tool-icons/open-webui.svg");
+  background-image: url("/tool-icons/openwebui.png");
 }
 
 .VPSidebarItem.level-1 .link[href*="/tools/codebuddy"] .text::before {
@@ -170,7 +170,7 @@ body {
 
 .VPSidebarItem.level-1 .link[href*="/tools/trae"] .text::before {
   content: "";
-  background-image: url("/tool-icons/trae.svg");
+  background-image: url("/tool-icons/trae.png");
 }
 
 .VPSidebarItem.level-1 .link[href*="/tools/cc-switch"] .text::before {
