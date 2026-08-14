@@ -185,26 +185,54 @@ body {
   background-image: url("/tool-icons/cc-switch.png");
 }
 
-.VPSidebarItem.level-1 .link[href*="/tools/github-copilot"] .text::before,
-.VPSidebarItem.level-1 .link[href*="/tools/lobehub"] .text::before,
-.VPSidebarItem.level-1 .link[href*="/tools/nextchat"] .text::before,
-.VPSidebarItem.level-1 .link[href*="/tools/opencat"] .text::before {
+.VPSidebarItem.level-1 .link[href*="/tools/github-copilot"] .text::before {
   content: "";
-  background-image: url("/tool-icons/openai.svg");
+  background-image: url("/tool-icons/github-copilot.png");
 }
 
 .VPSidebarItem.level-1 .link[href*="/tools/openclaw"] .text::before {
   content: "";
-  background-image: url("/tool-icons/403.svg");
+  background-image: url("/tool-icons/openclaw.svg");
 }
 
-.VPSidebarItem.level-1 .link[href*="/tools/opencode"] .text::before,
-.VPSidebarItem.level-1 .link[href*="/tools/zed-editor"] .text::before,
-.VPSidebarItem.level-1 .link[href*="/tools/cline"] .text::before,
-.VPSidebarItem.level-1 .link[href*="/tools/workbuddy"] .text::before,
+.VPSidebarItem.level-1 .link[href*="/tools/opencode"] .text::before {
+  content: "";
+  background-image: url("/tool-icons/opencode.png");
+}
+
+.VPSidebarItem.level-1 .link[href*="/tools/zed-editor"] .text::before {
+  content: "";
+  background-image: url("/tool-icons/zed-editor.png");
+}
+
+.VPSidebarItem.level-1 .link[href*="/tools/cline"] .text::before {
+  content: "";
+  background-image: url("/tool-icons/cline.png");
+}
+
+.VPSidebarItem.level-1 .link[href*="/tools/workbuddy"] .text::before {
+  content: "";
+  background-image: url("/tool-icons/workbuddy.svg");
+}
+
 .VPSidebarItem.level-1 .link[href*="/tools/botgem"] .text::before {
   content: "";
-  background-image: url("/tool-icons/codex.svg");
+  background-image: url("/tool-icons/botgem.ico");
+}
+
+.VPSidebarItem.level-1 .link[href*="/tools/lobehub"] .text::before {
+  content: "";
+  background-image: url("/tool-icons/lobehub.png");
+}
+
+.VPSidebarItem.level-1 .link[href*="/tools/opencat"] .text::before {
+  content: "";
+  background-image: url("/tool-icons/opencat.ico");
+}
+
+.VPSidebarItem.level-1 .link[href*="/tools/nextchat"] .text::before {
+  content: "";
+  background-image: url("/tool-icons/nextchat.png");
 }
 
 .VPSidebarItem.level-1 .link[href*="/tools/hermes-openclaw-403"] .text::before {
@@ -215,12 +243,12 @@ body {
 
 .VPSidebarItem.level-1 .link[href*="/tools/langchain-sdk"] .text::before {
   content: "";
-  background-image: url("/tool-icons/langchain.svg");
+  background-image: url("/tool-icons/langchain.png");
 }
 
 .VPSidebarItem.level-1 .link[href*="/tools/llamaindex"] .text::before {
   content: "";
-  background-image: url("/tool-icons/langchain.svg");
+  background-image: url("/tool-icons/llamaindex.svg");
 }
 
 .VPSidebarItem.level-1 .link[href*="/tools/troubleshooting"] .text::before {
