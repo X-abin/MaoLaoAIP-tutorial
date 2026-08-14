@@ -111,6 +111,7 @@ body {
 }
 
 .VPSidebarItem.level-1 .link[href*="/tools/"] .text::before {
+  content: "";
   display: inline-grid;
   place-items: center;
   width: 18px;
@@ -119,6 +120,7 @@ body {
   border-radius: 4px;
   color: #fff;
   background-color: transparent;
+  background-image: url("/tool-icons/openai.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -139,6 +141,11 @@ body {
 }
 
 .VPSidebarItem.level-1 .link[href*="/tools/claude-code"] .text::before {
+  content: "";
+  background-image: url("/tool-icons/claude.ico");
+}
+
+.VPSidebarItem.level-1 .link[href*="/tools/claude-cowork"] .text::before {
   content: "";
   background-image: url("/tool-icons/claude.ico");
 }
@@ -178,6 +185,28 @@ body {
   background-image: url("/tool-icons/cc-switch.png");
 }
 
+.VPSidebarItem.level-1 .link[href*="/tools/github-copilot"] .text::before,
+.VPSidebarItem.level-1 .link[href*="/tools/lobehub"] .text::before,
+.VPSidebarItem.level-1 .link[href*="/tools/nextchat"] .text::before,
+.VPSidebarItem.level-1 .link[href*="/tools/opencat"] .text::before {
+  content: "";
+  background-image: url("/tool-icons/openai.svg");
+}
+
+.VPSidebarItem.level-1 .link[href*="/tools/openclaw"] .text::before {
+  content: "";
+  background-image: url("/tool-icons/403.svg");
+}
+
+.VPSidebarItem.level-1 .link[href*="/tools/opencode"] .text::before,
+.VPSidebarItem.level-1 .link[href*="/tools/zed-editor"] .text::before,
+.VPSidebarItem.level-1 .link[href*="/tools/cline"] .text::before,
+.VPSidebarItem.level-1 .link[href*="/tools/workbuddy"] .text::before,
+.VPSidebarItem.level-1 .link[href*="/tools/botgem"] .text::before {
+  content: "";
+  background-image: url("/tool-icons/codex.svg");
+}
+
 .VPSidebarItem.level-1 .link[href*="/tools/hermes-openclaw-403"] .text::before {
   content: "";
   background-image: url("/tool-icons/403.svg");
@@ -185,6 +214,11 @@ body {
 }
 
 .VPSidebarItem.level-1 .link[href*="/tools/langchain-sdk"] .text::before {
+  content: "";
+  background-image: url("/tool-icons/langchain.svg");
+}
+
+.VPSidebarItem.level-1 .link[href*="/tools/llamaindex"] .text::before {
   content: "";
   background-image: url("/tool-icons/langchain.svg");
 }
