@@ -1,18 +1,65 @@
 # OpenAI Compatible
 
-OpenAI Compatible 是最通用的接入方式。只要工具支持自定义 OpenAI API 地址，通常都可以这样配置。
+OpenAI Compatible 是最通用的接入方式。只要软件里能填写自定义 OpenAI API 地址、API Key 和模型名，通常都可以按这一页配置 MaoLao API。
 
-## 基础配置
+## 适合哪些场景
 
-| 字段 | 填写内容 |
-| --- | --- |
-| API Key | MaoLao API 控制台创建的 Key |
-| Base URL | `https://api.maolaoapi.cc/v1` |
-| 备用 Base URL | `https://api.maolaoapi.com/v1` |
-| Chat Completions | `/chat/completions` |
-| Responses | `/responses` |
+- 自己写脚本、插件、机器人或网页应用。
+- 软件没有单独的 MaoLao API 选项，但支持 `OpenAI Compatible`、`Custom OpenAI`、`自定义 API`。
+- 想先用一个最标准的方式测试 Key、模型名和网络是否正常。
 
-## curl 测试
+## 准备工作
+
+1. 打开 MaoLao API 控制台，在令牌页创建一个专用 Key。
+2. 在模型与价格页复制你要用的完整模型名。
+3. 准备一个可以发 HTTP 请求的工具，例如终端、Apifox、Postman 或代码编辑器。
+
+<div class="ml-callout">
+新手建议先用一个低成本模型测试接口是否能跑通。确认正常后，再换成正式工作要用的模型。
+</div>
+
+## 第 1 步：确认基础字段
+
+把下面几项先记下来，后面所有软件基本都会用到。
+
+<div class="ml-field-table">
+  <div class="ml-field-row">
+    <div>API Key</div>
+    <div>填写 MaoLao API 控制台令牌页创建的 Key。</div>
+    <div>格式通常是一长串密钥，不要多复制空格。</div>
+  </div>
+  <div class="ml-field-row">
+    <div>Base URL</div>
+    <div><code>https://api.maolaoapi.cc/v1</code></div>
+    <div>必须带 <code>/v1</code>。</div>
+  </div>
+  <div class="ml-field-row">
+    <div>备用 Base URL</div>
+    <div><code>https://api.maolaoapi.com/v1</code></div>
+    <div>主地址网络不稳定时再切换。</div>
+  </div>
+  <div class="ml-field-row">
+    <div>模型名</div>
+    <div>从模型与价格页复制完整名称。</div>
+    <div>不要自己改大小写或简写。</div>
+  </div>
+</div>
+
+## 第 2 步：选择接口类型
+
+大多数聊天软件、代码软件会使用 Chat Completions；部分新版 SDK 或工具可能会使用 Responses。
+
+| 接口 | 完整地址 | 什么时候用 |
+| --- | --- | --- |
+| Chat Completions | `https://api.maolaoapi.cc/v1/chat/completions` | 聊天、代码助手、常见客户端 |
+| Responses | `https://api.maolaoapi.cc/v1/responses` | 支持新版 Responses API 的工具 |
+| Models | `https://api.maolaoapi.cc/v1/models` | 客户端刷新模型列表时可能会调用 |
+
+如果软件只让你填 Base URL，就填 `https://api.maolaoapi.cc/v1`，不要把 `/chat/completions` 一起填进去。
+
+## 第 3 步：用 curl 测试
+
+把 `YOUR_API_KEY` 换成你的 Key，把 `gpt-5.4-mini` 换成你准备使用的模型名。
 
 ```bash
 curl https://api.maolaoapi.cc/v1/chat/completions \
@@ -26,7 +73,11 @@ curl https://api.maolaoapi.cc/v1/chat/completions \
   }'
 ```
 
-## JavaScript fetch 示例
+看到返回内容里有回答文本，就说明 Key、Base URL、模型名这三项基本正常。
+
+## 第 4 步：在代码中调用
+
+推荐把 Key 放到环境变量里，不要直接写死在代码文件中。
 
 ```js
 const response = await fetch("https://api.maolaoapi.cc/v1/chat/completions", {
@@ -44,8 +95,23 @@ const response = await fetch("https://api.maolaoapi.cc/v1/chat/completions", {
 console.log(await response.json());
 ```
 
+## 配置检查清单
+
+<div class="ml-checklist">
+
+- Base URL 已经包含 `/v1`。
+- 请求头里有 `Authorization: Bearer 你的Key`。
+- 模型名来自模型与价格页，没有手动缩写。
+- 当前 Key 的分组支持这个模型。
+- Key 没有发到公开截图、群聊或 GitHub 仓库。
+
+</div>
+
 ## 常见问题
 
-- 返回 `401`：Key 错误、Key 被禁用或没有加 `Bearer`。
-- 返回模型不存在：模型名拼写错误，或 Key 分组不支持。
-- 客户端无法保存：Base URL 不要只填域名，要包含 `/v1`。
+| 现象 | 常见原因 | 处理方法 |
+| --- | --- | --- |
+| 返回 `401` | Key 填错、Key 被禁用、没有加 `Bearer` | 重新复制 Key，并检查请求头 |
+| 返回模型不存在 | 模型名拼写错误，或 Key 分组不支持 | 回到模型与价格页复制完整模型名 |
+| 客户端无法保存 | Base URL 填成了纯域名或填了完整接口路径 | 只填 `https://api.maolaoapi.cc/v1` |
+| 请求很慢 | 当前网络到主域名不稳定 | 切换备用 Base URL 后再测 |
