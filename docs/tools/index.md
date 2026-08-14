@@ -15,6 +15,18 @@
 2. 在 [模型与价格](/models-pricing) 确认模型支持的端点类型和分组。
 3. 第一次配置时优先使用 `auto` 分组，跑通后再按工具单独拆 Key。
 
+## 小白图文配置顺序
+
+如果你完全不知道从哪里开始，按这个顺序看就行：
+
+1. 先看 [OpenAI Compatible](/tools/openai-compatible)，记住四个字段：Provider 名称、Base URL、API Key、Model。
+2. 再选择你正在用的软件，例如 [Chatbox](/tools/chatbox)、[Cherry Studio](/tools/cherry-studio)、[Cursor](/tools/cursor)。
+3. 对照页面里的图片，把红色编号位置逐个填完。
+4. 保存后只发一句“请回复 ok”测试，成功后再开始正式使用。
+5. 如果是 Codex 频繁断线，直接看 [Codex CLI](/tools/codex-cli) 里的代理配置图。
+
+![MaoLao API 通用 Provider 配置示意图](/tutorial-shots/common-provider.svg)
+
 ## 快速判断用哪个教程
 
 | 你要接入的工具 | 看哪一页 |

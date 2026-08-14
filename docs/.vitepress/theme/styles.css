@@ -470,6 +470,17 @@ body {
   background: color-mix(in srgb, var(--vp-c-brand-soft) 42%, transparent);
 }
 
+.VPDoc img[src*="/tutorial-shots/"] {
+  display: block;
+  width: 100%;
+  max-width: 980px;
+  margin: 16px 0 18px;
+  border: 1px solid var(--ml-border);
+  border-radius: 8px;
+  box-shadow: var(--ml-shadow);
+  background: var(--vp-c-bg);
+}
+
 .ml-checklist {
   padding: 16px 18px;
   margin: 18px 0;

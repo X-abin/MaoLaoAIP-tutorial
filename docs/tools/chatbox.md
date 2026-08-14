@@ -12,6 +12,8 @@ Chatbox 可以通过自定义 OpenAI API 接入 MaoLao API。它比较适合做�
 
 Provider 选择 OpenAI API 或自定义 OpenAI API。不同版本可能显示为：
 
+![Chatbox 添加 MaoLao API 配置示意图](/tutorial-shots/chatbox-provider.svg)
+
 - `OpenAI`
 - `OpenAI API`
 - `Custom OpenAI`
@@ -20,6 +22,8 @@ Provider 选择 OpenAI API 或自定义 OpenAI API。不同版本可能显示为
 如果页面里有官方 OpenAI 和自定义地址两个输入区，优先使用可以填写 Base URL 的那一项。
 
 ## 第 2 步：填写 API 信息
+
+对照上图，最重要的是第 4、5、6 三个位置：API 地址、API Key、模型名。只要这三项正确，大多数问题就能排除一半。
 
 <div class="ml-field-table">
   <div class="ml-field-row">

@@ -12,11 +12,15 @@ Cherry Studio 支持自定义 OpenAI 兼容服务，适合把 MaoLao API 作为�
 
 在模型服务里点击新增，供应商类型选择 OpenAI 兼容。
 
+![Cherry Studio 添加 MaoLao API 服务商示意图](/tutorial-shots/cherry-studio-provider.svg)
+
 <div class="ml-guide-note">
 如果列表里没有 MaoLao API，可以选择 OpenAI Compatible、OpenAI API、自定义 OpenAI 这类选项。关键是它必须允许你自己填写 API 地址。
 </div>
 
 ## 第 2 步：填写供应商信息
+
+对照上图填写第 3 到第 6 个标记位置。新手最容易填错的是 API 地址，记得一定要带 `/v1`。
 
 <div class="ml-field-table">
   <div class="ml-field-row">

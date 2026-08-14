@@ -47,6 +47,10 @@ OPENAI_API_KEY=YOUR_API_KEY
 
 ## 第 4 步：填写连接字段
 
+Open WebUI 管理后台的字段可能比普通客户端更多。新手只需要先确认下面三项：Base URL、API Key、模型名。
+
+![MaoLao API 通用 Provider 配置示意图](/tutorial-shots/common-provider.svg)
+
 <div class="ml-field-table">
   <div class="ml-field-row">
     <div>连接名称</div>

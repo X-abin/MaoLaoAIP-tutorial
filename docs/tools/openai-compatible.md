@@ -22,6 +22,8 @@ OpenAI Compatible 是最通用的接入方式。只要软件里能填写自定�
 
 把下面几项先记下来，后面所有软件基本都会用到。
 
+![MaoLao API 通用 Provider 配置示意图](/tutorial-shots/common-provider.svg)
+
 <div class="ml-field-table">
   <div class="ml-field-row">
     <div>API Key</div>

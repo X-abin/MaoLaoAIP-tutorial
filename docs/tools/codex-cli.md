@@ -24,6 +24,8 @@ Codex CLI 往往会携带较多项目上下文，所以建议先用稳定、成�
 
 根据你使用的 Codex CLI 版本，把下面三项填入对应位置。
 
+![MaoLao API 通用 Provider 配置示意图](/tutorial-shots/common-provider.svg)
+
 <div class="ml-field-table">
   <div class="ml-field-row">
     <div>API Key</div>
@@ -54,6 +56,8 @@ Codex CLI 往往会携带较多项目上下文，所以建议先用稳定、成�
 ## 第 4 步：处理频繁 Reconnect / Reconnecting
 
 如果 Codex 经常出现 `Reconnect`、`Reconnecting...`，常见原因是本机代理没有被 Codex 正确识别，或者代理端口、代理协议填写错了。
+
+![Codex Reconnect 代理配置示意图](/tutorial-shots/codex-proxy-env.svg)
 
 建议按下面流程处理：
 

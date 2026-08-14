@@ -32,6 +32,10 @@ MaoLao API
 
 ## 第 3 步：填写配置字段
 
+Trae 如果显示的是英文界面，对照下面的通用图填写即可：`Base URL` 对应 API 地址，`API Key` 对应密钥，`Model` 对应模型名。
+
+![MaoLao API 通用 Provider 配置示意图](/tutorial-shots/common-provider.svg)
+
 <div class="ml-field-table">
   <div class="ml-field-row">
     <div>Base URL</div>

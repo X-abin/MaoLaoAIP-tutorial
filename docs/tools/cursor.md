@@ -20,6 +20,8 @@ Cursor 接入 MaoLao API 后，可以把代码解释、生成、重构等请求�
 
 在 Provider 类型里选择 OpenAI 兼容配置。常见名称包括：
 
+![MaoLao API 通用 Provider 配置示意图](/tutorial-shots/common-provider.svg)
+
 - `OpenAI Compatible`
 - `Custom OpenAI`
 - `OpenAI API`
@@ -28,6 +30,8 @@ Cursor 接入 MaoLao API 后，可以把代码解释、生成、重构等请求�
 如果 Cursor 只显示官方 OpenAI Key 输入框，先找是否有 `Override OpenAI Base URL` 或 `自定义地址` 选项。
 
 ## 第 3 步：填写连接字段
+
+如果 Cursor 的界面和图片不完全一样，也不用紧张。只要找到相同含义的四个字段：Provider 名称、Base URL、API Key、Model，就可以按图填写。
 
 <div class="ml-field-table">
   <div class="ml-field-row">

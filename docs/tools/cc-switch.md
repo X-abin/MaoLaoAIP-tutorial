@@ -62,6 +62,8 @@ maolao-daily
 
 如果 CC Switch 支持用量查询，可以在配置页打开用量查询开关。这个功能能让你在切换配置时顺手看到余额或消耗情况。
 
+![CC Switch 用量查询配置示意图](/tutorial-shots/cc-switch-usage.svg)
+
 配置要点：
 
 1. 打开当前配置右侧的编辑入口。

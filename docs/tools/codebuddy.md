@@ -22,6 +22,10 @@ CodeBuddy 这类编程辅助工具通常通过 OpenAI 兼容配置接入 MaoLao 
 
 ## 第 2 步：填写 MaoLao API 信息
 
+大多数 CodeBuddy 版本的字段位置会和下面这张通用图类似。找不到完全一样的名称时，看字段含义即可。
+
+![MaoLao API 通用 Provider 配置示意图](/tutorial-shots/common-provider.svg)
+
 <div class="ml-field-table">
   <div class="ml-field-row">
     <div>Provider 名称</div>
