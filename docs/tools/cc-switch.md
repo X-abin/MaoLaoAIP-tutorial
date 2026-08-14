@@ -14,7 +14,7 @@ CC Switch 适合在 Claude Code 相关配置中切换不同 API 地址、Key 和
 
 打开 CC Switch 后，先看右上角的橙色 `+` 按钮。点击它，就会进入“添加新供应商”页面。
 
-![CC Switch 首页点击右上角新增供应商](/tutorial-shots/cc-switch-list-add.png?v=real-cc-switch-20260814)
+![CC Switch 首页点击右上角新增供应商](/tutorial-shots/cc-switch-list-add.png?v=real-cc-switch-full-20260814)
 
 建议第一个配置用于日常开发，名称写清楚：
 
