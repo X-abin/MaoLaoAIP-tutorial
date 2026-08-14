@@ -12,9 +12,11 @@ CC Switch 适合在 Claude Code 相关配置中切换不同 API 地址、Key 和
 
 ## 第 1 步：新增 MaoLao API 配置
 
-在 CC Switch 中点击新增配置。建议第一个配置用于日常开发，名称写清楚：
+打开 CC Switch 后，先看右上角的橙色 `+` 按钮。点击它，就会进入“添加新供应商”页面。
 
-![CC Switch 添加 MaoLao API 供应商配置示意图](/tutorial-shots/cc-switch-provider.svg)
+![CC Switch 首页点击右上角新增供应商](/tutorial-shots/cc-switch-list-add.png)
+
+建议第一个配置用于日常开发，名称写清楚：
 
 ```text
 maolao-daily
@@ -33,33 +35,40 @@ maolao-daily
 
 进入配置编辑页后，重点填写下面字段。
 
-对照上图填写第 2 到第 6 个标记位置。这里的“请求地址”就是 MaoLao API 的 Base URL，填 `https://api.maolaoapi.cc/v1`。
+对照下面这张图填写。这里的“API 请求地址”就是 MaoLao API 的 Base URL，填 `https://api.maolaoapi.cc/v1`。
+
+![CC Switch 添加新供应商表单填写位置](/tutorial-shots/cc-switch-add-provider.png)
 
 <div class="ml-field-table">
   <div class="ml-field-row">
+    <div>供应商名称</div>
+    <div>建议填写 <code>MaoLao API</code> 或 <code>maolao-daily</code>。</div>
+    <div>以后在列表里能一眼看出来。</div>
+  </div>
+  <div class="ml-field-row">
+    <div>备注</div>
+    <div>可填 <code>日常开发</code>、<code>测试专用</code> 等。</div>
+    <div>不填也可以，不影响调用。</div>
+  </div>
+  <div class="ml-field-row">
+    <div>官网链接</div>
+    <div>可以填写 MaoLao API 官网或控制台地址。</div>
+    <div>只是备注入口，可选。</div>
+  </div>
+  <div class="ml-field-row">
     <div>API Key</div>
     <div>填写 MaoLao API 控制台创建的 Key。</div>
-    <div>建议每个用途单独 Key，方便限额和查日志。</div>
+    <div>按照图里的提示，只填这一栏即可。</div>
   </div>
   <div class="ml-field-row">
-    <div>请求地址</div>
+    <div>API 请求地址</div>
     <div><code>https://api.maolaoapi.cc/v1</code></div>
-    <div>如果 CC Switch 只写 API 地址，也填这个。</div>
-  </div>
-  <div class="ml-field-row">
-    <div>模型</div>
-    <div>填写完整模型名。</div>
-    <div>不要写显示名，要写接口使用的真实模型名。</div>
-  </div>
-  <div class="ml-field-row">
-    <div>预设模板</div>
-    <div>优先选择通用模板或 OpenAI 兼容模板。</div>
-    <div>如果有 Claude Code 专用模板，可按模型说明选择。</div>
+    <div>不要漏掉最后的 <code>/v1</code>。</div>
   </div>
 </div>
 
 <div class="ml-guide-note">
-界面位置参考：配置编辑页通常会同时出现 Key、请求地址、预设模板、启用开关等区域。你可以把它理解成一张“连接卡片”，每张卡片对应一组 MaoLao API 配置。
+图里“完整 URL”开关保持默认即可。新手只需要先把 API Key 和 API 请求地址填对，再点击右下角“添加”。
 </div>
 
 ## 第 3 步：启用用量查询
