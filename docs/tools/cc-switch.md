@@ -14,6 +14,8 @@ CC Switch 适合在 Claude Code 相关配置中切换不同 API 地址、Key 和
 
 在 CC Switch 中点击新增配置。建议第一个配置用于日常开发，名称写清楚：
 
+![CC Switch 添加 MaoLao API 供应商配置示意图](/tutorial-shots/cc-switch-provider.svg)
+
 ```text
 maolao-daily
 ```
@@ -30,6 +32,8 @@ maolao-daily
 ## 第 2 步：填写 API Key 和请求地址
 
 进入配置编辑页后，重点填写下面字段。
+
+对照上图填写第 2 到第 6 个标记位置。这里的“请求地址”就是 MaoLao API 的 Base URL，填 `https://api.maolaoapi.cc/v1`。
 
 <div class="ml-field-table">
   <div class="ml-field-row">
@@ -61,8 +65,6 @@ maolao-daily
 ## 第 3 步：启用用量查询
 
 如果 CC Switch 支持用量查询，可以在配置页打开用量查询开关。这个功能能让你在切换配置时顺手看到余额或消耗情况。
-
-![CC Switch 用量查询配置示意图](/tutorial-shots/cc-switch-usage.svg)
 
 配置要点：
 
