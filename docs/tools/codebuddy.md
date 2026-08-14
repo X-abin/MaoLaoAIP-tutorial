@@ -2,6 +2,12 @@
 
 CodeBuddy 这类编程辅助工具通常通过 OpenAI 兼容配置接入 MaoLao API。配置完成后，可以用于代码解释、补全、重构和问答。
 
+## 下载地址
+
+- 官方下载页：[https://www.codebuddy.ai/ide](https://www.codebuddy.ai/ide)
+- 官方安装文档：[https://www.codebuddy.ai/docs/ide/Getting-Started/Installation](https://www.codebuddy.ai/docs/ide/Getting-Started/Installation)
+- 新手建议：优先下载 CodeBuddy IDE；如果你只想在 VS Code 或 JetBrains 里用，再按官方文档安装插件。
+
 ## 准备工作
 
 1. 创建一个 `codebuddy` 专用 MaoLao API Key。

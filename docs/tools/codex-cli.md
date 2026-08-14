@@ -2,6 +2,12 @@
 
 Codex CLI 适合在本地项目里做代码阅读、修改、测试和自动化任务。接入 MaoLao API 时，重点是把 API Key、Base URL、模型名和本机网络代理配置正确。
 
+## 下载地址
+
+- 官方文档：[https://developers.openai.com/codex/cli/](https://developers.openai.com/codex/cli/)
+- 官方 GitHub：[https://github.com/openai/codex](https://github.com/openai/codex)
+- 新手建议：先看官方文档确认安装方式；如果你使用 Codex Desktop，可以优先按桌面端的设置入口配置。
+
 ## 准备工作
 
 1. 在 MaoLao API 控制台创建 `codex-cli` 专用 Key。

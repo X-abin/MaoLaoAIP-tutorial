@@ -2,6 +2,11 @@
 
 Chatbox 可以通过自定义 OpenAI API 接入 MaoLao API。它比较适合做日常聊天、翻译、总结和简单代码问答。
 
+## 下载地址
+
+- 官方下载页：[https://chatboxai.app/en](https://chatboxai.app/en)
+- 新手建议：官网提供 Windows、macOS、Linux、iOS、Android 和网页版，电脑配置优先下载桌面版。
+
 ## 准备工作
 
 1. 在 MaoLao API 控制台创建 `chatbox` 专用 Key。

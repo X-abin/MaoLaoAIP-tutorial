@@ -2,6 +2,11 @@
 
 Trae 接入 MaoLao API 的重点，是确认它支持自定义 OpenAI Compatible Provider。配置完成后，可以用于代码问答、文件理解和项目辅助开发。
 
+## 下载地址
+
+- 官方下载中心：[https://www.trae.ai/download](https://www.trae.ai/download)
+- 新手建议：进入下载中心后选择你的系统版本，Windows 用户选择 Windows 安装包即可。
+
 ## 准备工作
 
 1. 创建一个 `trae` 专用 MaoLao API Key。

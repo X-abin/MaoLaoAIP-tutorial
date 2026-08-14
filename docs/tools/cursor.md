@@ -2,6 +2,11 @@
 
 Cursor 接入 MaoLao API 后，可以把代码解释、生成、重构等请求转到自定义模型。建议为 Cursor 单独创建一个 Key，方便限制额度和查看消耗。
 
+## 下载地址
+
+- 官方下载页：[https://cursor.com/download](https://cursor.com/download)
+- 新手建议：Windows 用户直接选择 Windows 版本；macOS 用户根据电脑芯片选择 Apple Silicon 或 Intel。
+
 ## 准备工作
 
 1. 在 MaoLao API 控制台创建一个 `cursor` 专用 Key。

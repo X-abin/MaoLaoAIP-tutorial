@@ -27,6 +27,22 @@
 
 ![MaoLao API 通用 Provider 配置示意图](/tutorial-shots/common-provider.svg)
 
+## 软件下载地址速查
+
+优先从官网或官方 GitHub 下载，不建议从第三方软件下载站下载。
+
+| 软件 | 官方下载地址 | 新手建议 |
+| --- | --- | --- |
+| Cursor | [cursor.com/download](https://cursor.com/download) | Windows 用户选 Windows 版本即可 |
+| Claude Code | [Claude Code 安装文档](https://code.claude.com/docs/en/setup) | 按官方文档安装命令行工具 |
+| Codex CLI | [Codex CLI 官方文档](https://developers.openai.com/codex/cli/) / [GitHub](https://github.com/openai/codex) | 先看官方文档，再按系统安装 |
+| Cherry Studio | [GitHub Releases](https://github.com/CherryHQ/cherry-studio/releases) | 下载最新稳定版 |
+| Chatbox | [chatboxai.app](https://chatboxai.app/en) | 官网会提供 Windows、macOS、Linux 和移动端 |
+| Open WebUI | [安装文档](https://docs.openwebui.com/getting-started/) / [GitHub](https://github.com/open-webui/open-webui) | 适合 Docker 或服务器部署 |
+| CodeBuddy | [codebuddy.ai/ide](https://www.codebuddy.ai/ide) | 下载 CodeBuddy IDE 或按官方文档安装插件 |
+| Trae | [trae.ai/download](https://www.trae.ai/download) | 进入下载中心选择对应系统 |
+| CC Switch | [官网](https://ccswitch.io/en/) / [GitHub Releases](https://github.com/farion1231/cc-switch/releases) | 只从官网或官方 GitHub 下载 |
+
 ## 快速判断用哪个教程
 
 | 你要接入的工具 | 看哪一页 |

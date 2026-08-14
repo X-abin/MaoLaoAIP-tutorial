@@ -2,6 +2,10 @@
 
 OpenAI Compatible 是最通用的接入方式。只要软件里能填写自定义 OpenAI API 地址、API Key 和模型名，通常都可以按这一页配置 MaoLao API。
 
+## 下载地址
+
+OpenAI Compatible 不是一个单独软件，所以不需要下载。你只要在已经安装的软件里找到 `OpenAI Compatible`、`Custom OpenAI` 或 `自定义 API` 入口，再按这一页填写即可。
+
 ## 适合哪些场景
 
 - 自己写脚本、插件、机器人或网页应用。

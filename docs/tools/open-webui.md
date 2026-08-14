@@ -2,6 +2,12 @@
 
 Open WebUI 常用于本地或服务器部署，把 MaoLao API 配成 OpenAI 兼容后端后，就可以在网页里统一使用模型。它适合多人使用，也适合长期沉淀聊天和知识库。
 
+## 下载地址
+
+- 官方安装文档：[https://docs.openwebui.com/getting-started/](https://docs.openwebui.com/getting-started/)
+- 官方 GitHub：[https://github.com/open-webui/open-webui](https://github.com/open-webui/open-webui)
+- 新手建议：Open WebUI 更像“网页服务”，不是普通聊天客户端。推荐有 Docker 或服务器基础后再部署。
+
 ## 准备工作
 
 1. 创建一个 `open-webui` 专用 MaoLao API Key。

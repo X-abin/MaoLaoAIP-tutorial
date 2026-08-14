@@ -2,6 +2,11 @@
 
 Claude Code 适合代码阅读、修改和项目级任务。接入前先在 MaoLao API 的模型与价格页确认目标模型是否支持 Claude Code 或 Anthropic 相关端点。
 
+## 下载地址
+
+- 官方安装文档：[https://code.claude.com/docs/en/setup](https://code.claude.com/docs/en/setup)
+- 新手建议：Claude Code 是命令行工具，不是普通双击安装的软件。先按官方文档完成安装，再回来配置 MaoLao API。
+
 ## 准备工作
 
 1. 创建一个 `claude-code` 专用 MaoLao API Key。

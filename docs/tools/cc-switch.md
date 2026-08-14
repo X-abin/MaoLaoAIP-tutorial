@@ -2,6 +2,12 @@
 
 CC Switch 适合在 Claude Code 相关配置中切换不同 API 地址、Key 和模型组合。它的价值不是只保存一个 Key，而是把“日常开发、低成本测试、高能力模型、备用线路”拆成多个可切换配置。
 
+## 下载地址
+
+- 官方网站：[https://ccswitch.io/en/](https://ccswitch.io/en/)
+- 官方 GitHub Releases：[https://github.com/farion1231/cc-switch/releases](https://github.com/farion1231/cc-switch/releases)
+- 新手建议：只从官网或官方 GitHub Releases 下载。任何要求你为 CC Switch 单独付费或充值的网站，都不要使用。
+
 ## 准备工作
 
 1. 在 MaoLao API 控制台创建一个或多个专用 Key。
