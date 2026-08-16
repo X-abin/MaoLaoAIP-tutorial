@@ -4,8 +4,8 @@ Cherry Studio 支持自定义 OpenAI 兼容服务，适合把 MaoLao API 作为�
 
 ## 下载地址
 
-- 官方 GitHub Releases：[https://github.com/CherryHQ/cherry-studio/releases](https://github.com/CherryHQ/cherry-studio/releases)
-- 新手建议：打开 Releases 后下载最新版本，Windows 通常选择 `.exe` 或 `.msi` 安装包。
+- 官方下载页：[https://www.cherryai.com.cn/download](https://www.cherryai.com.cn/download)
+- 新手建议：打开下载页后，选择与你电脑系统对应的安装包；Windows 通常选择 Windows 版本。
 
 ## 准备工作
 
