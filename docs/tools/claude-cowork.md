@@ -23,7 +23,7 @@
 
 先打开 Claude Desktop。你看到下面这个 Home 首页，就说明软件已经正常启动。
 
-![Claude Desktop 首页真实截图](/tutorial-shots/claude-coworks-home.png?v=real-claude-coworks-20260816)
+![Claude Desktop 首页真实截图](/tutorial-shots/claude-coworks-home.png)
 
 接下来在 Claude Desktop 中进入标题为 `Configure third-party inference` 的配置页面。不同版本的入口位置可能不同，但进入后页面标题、左侧 `Connection` 菜单和右侧字段应与下一张截图一致。
 
@@ -35,7 +35,7 @@
 
 进入配置页后，左侧选中 `Connection`。右侧上方的连接类型选择 `Gateway`。
 
-![Claude Desktop Configure third-party inference 真实配置截图](/tutorial-shots/claude-coworks-connection.png?v=real-claude-coworks-20260816)
+![Claude Desktop Configure third-party inference 真实配置截图](/tutorial-shots/claude-coworks-connection.png)
 
 请对照截图逐项填写：
 
