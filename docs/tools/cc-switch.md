@@ -1,137 +1,185 @@
 # CC Switch
 
-CC Switch 适合在 Claude Code 相关配置中切换不同 API 地址、Key 和模型组合。它的价值不是只保存一个 Key，而是把“日常开发、低成本测试、高能力模型、备用线路”拆成多个可切换配置。
+CC Switch 用来保存和切换不同 AI 服务商的 API 配置。本页按这台电脑上正在运行的 CC Switch 真实界面编写，适合把 Codex 供应商配置为 MaoLao API。
+
+截图中的已有供应商、账号或图标仅用于说明位置；本教程不会公开任何已有的 API Key。
 
 ## 下载地址
 
 - 官方网站：[https://ccswitch.io/en/](https://ccswitch.io/en/)
 - 官方 GitHub Releases：[https://github.com/farion1231/cc-switch/releases](https://github.com/farion1231/cc-switch/releases)
-- 新手建议：只从官网或官方 GitHub Releases 下载。任何要求你为 CC Switch 单独付费或充值的网站，都不要使用。
 
-## 准备工作
+## 配置前准备
 
-1. 在 MaoLao API 控制台创建一个或多个专用 Key。
-2. 准备主 Base URL：`https://api.maolaoapi.cc/v1`。
-3. 准备备用 Base URL：`https://api.maolaoapi.com/v1`。
-4. 在模型与价格页复制常用模型名。
-5. 打开 CC Switch，确认可以新增配置和启用当前配置。
+开始前准备好下面三项：
 
-## 第 1 步：新增 MaoLao API 配置
+1. MaoLao API 控制台创建的专用 Key。
+2. MaoLao API 地址：`https://api.maolaoapi.cc/v1`。
+3. MaoLao API“模型与价格”页面中可用的完整模型 ID。
 
-打开 CC Switch 后，先看右上角的橙色 `+` 按钮。点击它，就会进入“添加新供应商”页面。
+::: warning
+不要把 API Key 写在供应商名称、备注或截图里。Key 只填写在 `API Key` 输入框。
+:::
 
-![CC Switch 首页点击右上角新增供应商](/tutorial-shots/cc-switch-list-add.png?v=real-cc-switch-full-20260814)
+## 第 1 步：在首页点击新增
 
-建议第一个配置用于日常开发，名称写清楚：
+打开 CC Switch。右上角橙色圆形 `+` 按钮就是“新增供应商”入口。
 
-```text
-maolao-daily
-```
+![CC Switch 真实首页与新增按钮](/tutorial-shots/cc-switch-live-home.png)
 
-如果你会配置多个 Key，可以按用途命名：
+点击 `+` 后进入“添加新供应商”页面。
 
-| 配置名称 | 用途 |
-| --- | --- |
-| `maolao-daily` | 日常开发 |
-| `maolao-test` | 低成本测试 |
-| `maolao-strong` | 复杂代码任务 |
-| `maolao-backup` | 主线路不稳定时备用 |
+## 第 2 步：选择 Codex 供应商和自定义配置
 
-## 第 2 步：填写 API Key 和请求地址
+页面顶部会显示 `Codex 供应商` 和 `统一供应商` 两个分类。
 
-进入配置编辑页后，重点填写下面字段。
+如果你要给 Codex 配置 MaoLao API：
 
-对照下面这张图填写。这里的“API 请求地址”就是 MaoLao API 的 Base URL，填 `https://api.maolaoapi.cc/v1`。
+1. 保持在 `Codex 供应商`。
+2. 选择左上方的 `自定义配置`。
+3. 向下滚动，填写供应商的 API 字段。
 
-![CC Switch 添加新供应商表单填写位置](/tutorial-shots/cc-switch-add-provider.png?v=real-cc-switch-20260814)
+下面是本机实际打开的添加供应商页面。底部提示也写着：选择预设后，请在下方填写 API Key 等字段。
+
+![CC Switch 真实添加供应商页面](/tutorial-shots/cc-switch-live-add-provider.png)
+
+::: tip
+不要因为列表里有很多预设服务商就随便选择。MaoLao API 使用本页的 `自定义配置`，这样地址、Key 和协议都由你自己明确填写。
+:::
+
+## 第 3 步：填写供应商名称、Key 和请求地址
+
+选择 `自定义配置` 后向下滚动，会看到实际输入框。
+
+![CC Switch 真实 API Key 与请求地址表单](/tutorial-shots/cc-switch-live-key-url-form.png)
+
+请按下面填写：
 
 <div class="ml-field-table">
   <div class="ml-field-row">
     <div>供应商名称</div>
-    <div>建议填写 <code>MaoLao API</code> 或 <code>maolao-daily</code>。</div>
-    <div>以后在列表里能一眼看出来。</div>
+    <div>填写 <code>MaoLao API</code>。</div>
+    <div>这是列表中显示的名称，方便以后识别。</div>
   </div>
   <div class="ml-field-row">
     <div>备注</div>
-    <div>可填 <code>日常开发</code>、<code>测试专用</code> 等。</div>
-    <div>不填也可以，不影响调用。</div>
+    <div>可填写 <code>日常开发</code> 或 <code>Codex</code>。</div>
+    <div>可选，不影响调用。</div>
   </div>
   <div class="ml-field-row">
     <div>官网链接</div>
-    <div>可以填写 MaoLao API 官网或控制台地址。</div>
-    <div>只是备注入口，可选。</div>
+    <div>可填写 <code>https://maolaoapi.com</code>。</div>
+    <div>可选，只是方便以后打开官网。</div>
   </div>
   <div class="ml-field-row">
     <div>API Key</div>
-    <div>填写 MaoLao API 控制台创建的 Key。</div>
-    <div>按照图里的提示，只填这一栏即可。</div>
+    <div>粘贴 MaoLao API 控制台创建的 Key。</div>
+    <div>只填这一处，不要加引号或空格。</div>
   </div>
   <div class="ml-field-row">
     <div>API 请求地址</div>
     <div><code>https://api.maolaoapi.cc/v1</code></div>
-    <div>不要漏掉最后的 <code>/v1</code>。</div>
+    <div>地址只写到 <code>/v1</code>。</div>
   </div>
 </div>
 
-<div class="ml-guide-note">
-图里“完整 URL”开关保持默认即可。新手只需要先把 API Key 和 API 请求地址填对，再点击右下角“添加”。
-</div>
+### `完整 URL` 要不要打开？
 
-## 第 3 步：启用用量查询
+截图中 `完整 URL` 开关默认是关闭状态。第一次配置时保持关闭。
 
-如果 CC Switch 支持用量查询，可以在配置页打开用量查询开关。这个功能能让你在切换配置时顺手看到余额或消耗情况。
+你填写的是服务商基础地址，CC Switch 会根据协议自动补齐后面的接口路径。因此不要填成：
 
-配置要点：
+```text
+https://api.maolaoapi.cc/v1/responses
+```
 
-1. 打开当前配置右侧的编辑入口。
-2. 找到“启用用量查询”或类似开关。
-3. 开启开关。
-4. API Key 填当前配置使用的 MaoLao API Key。
-5. 请求地址填 `https://api.maolaoapi.cc/v1`。
-6. 保存后回到列表页，刷新或重新启用该配置。
+正确填写：
 
-如果用量查询失败，但模型调用正常，通常不影响实际使用。先确认 Key、请求地址和网络，再检查 CC Switch 当前版本是否支持该接口格式。
+```text
+https://api.maolaoapi.cc/v1
+```
 
-## 第 4 步：启用并测试配置
+## 第 4 步：确认高级选项中的协议
 
-保存后回到配置列表：
+继续向下滚动，打开 `高级选项`。本机真实界面会显示 `上游格式`，默认选项是 `Responses（原生）`。
 
-1. 点击目标配置的启用按钮。
-2. 确认当前启用项显示为 MaoLao API 配置。
-3. 打开 Claude Code 或相关工具。
-4. 发送一个很短的测试请求，例如“请回复 ok”。
-5. 如果能正常回复，再进行代码类任务。
+![CC Switch 真实高级选项与 Responses 协议](/tutorial-shots/cc-switch-live-provider-form.png)
 
-## 第 5 步：拆分多套配置
+请按下面处理：
 
-建议不要所有场景都共用同一套配置。可以这样拆：
+1. `上游格式` 保持为 `Responses（原生）`。
+2. 第一次配置时，`模型映射` 不要填写。
+3. `自定义 User-Agent` 保持默认，不需要修改。
+4. 不要先点“获取模型列表”或“添加模型”，先完成基础连接测试。
 
-| 配置 | Key 建议 | 使用场景 |
-| --- | --- | --- |
-| 稳定分组 Key | `maolao-daily` | 日常开发 |
-| 低价分组 Key | `maolao-test` | 测试或低风险任务 |
-| 高额度 Key | `maolao-strong` | 长上下文项目 |
-| 低额度 Key | `maolao-temp` | 临时实验 |
-| 备用地址 Key | `maolao-backup` | 主地址异常时快速切换 |
+::: tip
+黄色提示写着“填写兼容 OpenAI Response 格式的服务端地址”。MaoLao API 的基础地址填写为 `https://api.maolaoapi.cc/v1`，不要在地址末尾额外添加 `/responses`。
+:::
 
-## 排查清单
+## 第 5 步：保存供应商
 
-<div class="ml-checklist">
+确认以下项目后，点击右下角蓝色 `+ 添加`：
 
-- 当前启用的是 MaoLao API 配置，而不是旧配置。
-- 请求地址包含 `/v1`。
-- API Key 没有复制多余空格。
-- 模型名是模型与价格页里的完整名称。
-- Claude Code 或相关工具已经重新读取了 CC Switch 的最新配置。
-- 用量查询失败时，先区分是“查询失败”还是“模型调用失败”。
+1. 已选中 `Codex 供应商 > 自定义配置`。
+2. API Key 已粘贴完成。
+3. API 请求地址是 `https://api.maolaoapi.cc/v1`。
+4. `完整 URL` 保持关闭。
+5. 上游格式为 `Responses（原生）`。
 
-</div>
+添加成功后会回到首页，并出现你填写的 `MaoLao API` 供应商卡片。
+
+## 第 6 步：用小任务测试
+
+新供应商出现在首页后，先完全退出并重新打开需要使用的 Codex 工具，再在一个小目录中测试。
+
+建议先发一条简单指令：
+
+```text
+请只回复：连接成功
+```
+
+正常返回后，再测试代码阅读、文件修改或长对话。
+
+::: warning
+如果你要配置的不是 Codex，而是 CC Switch 顶部图标对应的其他工具，请先切换到对应工具的供应商分类，再添加配置。不要把 Codex 供应商配置误当成所有软件都自动生效。
+:::
 
 ## 常见问题
 
-| 现象 | 处理方法 |
-| --- | --- |
-| 点击启用后仍然走旧配置 | 重新启用目标配置，并重启相关工具 |
-| 用量查询不显示 | 检查 Key、请求地址和 CC Switch 版本 |
-| 模型调用失败 | 检查模型名、Key 分组和 Base URL |
-| 需要临时切换线路 | 复制当前配置，把请求地址改成备用 Base URL |
+### 提示认证失败
+
+依次检查：
+
+1. API Key 是否来自 MaoLao API 控制台。
+2. Key 前后是否有空格。
+3. API 请求地址是否是 `https://api.maolaoapi.cc/v1`。
+4. `完整 URL` 是否保持关闭。
+5. 上游格式是否为 `Responses（原生）`。
+
+### 返回模型不存在
+
+第一次配置时先不要做模型映射。进入 MaoLao API“模型与价格”页面，确认当前 Key 分组支持的完整模型 ID。
+
+### 添加后调用仍然是旧配置
+
+确认新供应商卡片已经出现在首页，然后完全退出并重启需要使用的 Codex 工具。不要只关闭终端中的一条任务。
+
+### 无法添加
+
+检查是否遗漏 API Key 或 API 请求地址。截图中的底部提示说明，选择预设或自定义配置后，仍需要填写 API Key 等必填字段。
+
+## 配置检查清单
+
+<div class="ml-checklist">
+
+- 已从 CC Switch 首页右上角 `+` 进入添加供应商。
+- 已选择 `Codex 供应商 > 自定义配置`。
+- 供应商名称填写为 `MaoLao API`。
+- API Key 只填写在 `API Key` 输入框。
+- API 请求地址是 `https://api.maolaoapi.cc/v1`。
+- `完整 URL` 保持关闭。
+- 上游格式是 `Responses（原生）`。
+- 已点击右下角 `+ 添加` 保存。
+- 已用小任务完成首次测试。
+
+</div>
