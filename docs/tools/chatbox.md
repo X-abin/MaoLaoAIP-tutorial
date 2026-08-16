@@ -1,6 +1,6 @@
 # Chatbox
 
-Chatbox 可以通过自定义 OpenAI API 接入 MaoLao API。它比较适合做日常聊天、翻译、总结和简单代码问答。
+Chatbox 是一个桌面聊天客户端，适合用 MaoLao API 做日常聊天、翻译、长文总结和代码问答。本教程按本机 Chatbox `1.22.3` 的真实界面编写。
 
 ## 下载地址
 
@@ -9,56 +9,87 @@ Chatbox 可以通过自定义 OpenAI API 接入 MaoLao API。它比较适合做�
 
 ## 准备工作
 
-1. 在 MaoLao API 控制台创建 `chatbox` 专用 Key。
-2. 在模型与价格页复制一个常用聊天模型名。
-3. 打开 Chatbox 设置，找到模型提供商或 API 设置。
+1. 在 MaoLao API 控制台创建一个 API Key。
+2. 在“模型与价格”页面复制一个可用的完整模型 ID。
+3. 打开 Chatbox。
 
-## 第 1 步：选择 Provider
+## 第 1 步：打开设置
 
-Provider 选择 OpenAI API 或自定义 OpenAI API。不同版本可能显示为：
+打开 Chatbox 后，点击左下角的“设置”。
 
-![Chatbox 添加 MaoLao API 配置示意图](/tutorial-shots/chatbox-provider.svg)
+![Chatbox 首页真实截图](/tutorial-shots/chatbox-live-home.png)
 
-- `OpenAI`
-- `OpenAI API`
-- `Custom OpenAI`
-- `OpenAI Compatible`
+进入设置后，点击左侧的“模型提供方”。
 
-如果页面里有官方 OpenAI 和自定义地址两个输入区，优先使用可以填写 Base URL 的那一项。
+![Chatbox 设置入口真实截图](/tutorial-shots/chatbox-live-settings.png)
 
-## 第 2 步：填写 API 信息
+## 第 2 步：选择 OpenAI 提供方
 
-对照上图，最重要的是第 4、5、6 三个位置：API 地址、API Key、模型名。只要这三项正确，大多数问题就能排除一半。
+在中间的服务商列表选择 `OpenAI`。如果你的列表里还没有 OpenAI，可以点击左下角“添加”，然后在弹出的列表里点击 `OpenAI`。
+
+![Chatbox 模型提供方真实截图](/tutorial-shots/chatbox-live-providers.png)
+
+![Chatbox 添加提供方真实截图](/tutorial-shots/chatbox-live-add-provider.png)
+
+> 不要点击“通过 OAuth 登录”。接入 MaoLao API 时，直接填写下面的 API 密钥和 API 主机即可。
+
+## 第 3 步：填写 MaoLao API 地址和 Key
+
+在 OpenAI 页面填写 API Key 和 API 主机。
 
 <div class="ml-field-table">
   <div class="ml-field-row">
-    <div>API Key</div>
-    <div>填写 MaoLao API Key。</div>
-    <div>不要把 Key 分享给别人。</div>
+    <div>位置</div>
+    <div>填写内容</div>
+    <div>新手提示</div>
   </div>
   <div class="ml-field-row">
-    <div>API Host / Base URL</div>
-    <div><code>https://api.maolaoapi.cc/v1</code></div>
-    <div>如果软件要求 Host，也填这个地址。</div>
+    <div>API 密钥</div>
+    <div>你的 MaoLao API Key</div>
+    <div>从 MaoLao API 控制台复制。不要发送给他人，也不要在截图中显示明文。</div>
   </div>
   <div class="ml-field-row">
-    <div>Model</div>
-    <div>填写完整模型名。</div>
-    <div>建议先用低成本模型测试。</div>
+    <div>API 主机</div>
+    <div><code>https://api.maolaoapi.cc</code></div>
+    <div>当前 Chatbox 会自动补上 <code>/v1/chat/completions</code>，这里不要再填写 <code>/v1</code>。</div>
   </div>
 </div>
 
-## 第 3 步：保存并测试
-
-保存后新建一个对话，发送：
+填写后看一下输入框下面的“预览”。它应显示为：
 
 ```text
-请回复 ok，并说明当前接口可用。
+https://api.maolaoapi.cc/v1/chat/completions
 ```
 
-正常返回后，可以继续测试翻译、长文总结和代码解释。
+![Chatbox 填写 MaoLao API 主机真实截图](/tutorial-shots/chatbox-live-maolao-host.png)
 
-## 第 4 步：控制上下文消耗
+## 第 4 步：添加要使用的模型
+
+在“模型”标题右侧点击“新建”，会弹出编辑模型窗口。
+
+![Chatbox 新建模型真实截图](/tutorial-shots/chatbox-live-new-model.png)
+
+按下面填写：
+
+1. `模型 ID`：粘贴 MaoLao API 控制台里的完整模型名称。
+2. `显示名称`：可不填；不填时 Chatbox 会直接显示模型 ID。
+3. `模型类型`：普通对话模型选择“聊天”。
+4. `上下文窗口`、`最大输出 Token 数`：第一次不确定时可以先留空，或按模型说明填写。
+5. 点击“测试模型”。测试通过后点击“保存”。
+
+## 第 5 步：选择默认模型并测试
+
+回到设置左侧，打开“默认模型”，选择刚刚添加的模型。
+
+然后关闭设置，新建一个对话，发送：
+
+```text
+请回复“Chatbox 已连接 MaoLao API”，并用一句话介绍你自己。
+```
+
+正常返回就说明配置成功。之后可以继续测试翻译、长文总结和代码解释。
+
+## 控制上下文消耗
 
 Chatbox 的连续对话会携带历史内容。对新手来说，最容易忽略的是历史越长，消耗越高。
 
@@ -73,7 +104,8 @@ Chatbox 的连续对话会携带历史内容。对新手来说，最容易忽略
 
 | 现象 | 处理方法 |
 | --- | --- |
-| 没有响应 | 检查网络、Base URL、Key 是否正确 |
+| 没有响应 | 检查网络、API 主机、Key 是否正确 |
+| 预览地址多出两个 `/v1` | API 主机只填写 `https://api.maolaoapi.cc`，不要在这里再添加 `/v1` |
 | 提示模型不存在 | 从模型与价格页重新复制完整模型名 |
 | 提示无权限 | 检查 Key 分组是否支持该模型 |
 | 消耗偏高 | 减少连续历史，必要时新建对话 |
