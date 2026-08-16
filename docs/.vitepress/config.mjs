@@ -44,7 +44,6 @@ export default defineConfig({
           { text: "Claude Coworks", link: "/tools/claude-cowork" },
           { text: "Codex CLI", link: "/tools/codex-cli" },
           { text: "CC Switch", link: "/tools/cc-switch" },
-          { text: "OpenClaw", link: "/tools/openclaw" },
           { text: "OpenCode", link: "/tools/opencode" },
           { text: "Cherry Studio", link: "/tools/cherry-studio" },
           { text: "Cursor", link: "/tools/cursor" },
