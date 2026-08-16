@@ -19,19 +19,36 @@
 这页是 Claude Desktop 的第三方推理配置。截图里的网关地址填 MaoLao API：<code>https://api.maolaoapi.cc/v1</code>，不要填其他教程中的 API 地址。
 </div>
 
-## 第 1 步：确认已打开 Claude Desktop
+## 第 1 步：打开开发者菜单
+
+这一步是进入第三方推理配置的入口。不要点击左侧的 `Code`，也不要先进入账号设置。
+
+1. 打开 Claude Desktop，停留在 Home 首页。
+2. 点击窗口左上角的三横菜单图标。
+3. 鼠标停在 `Developer` 上。
+4. 在展开的菜单中点击 `Configure Third-Party Inference...`。
+
+下面是这台电脑上 Claude Desktop 的真实菜单截图。看到 `Developer` 和 `Configure Third-Party Inference...` 就说明入口已经打开，可以继续下一步。
+
+![Claude Desktop 开发者菜单真实截图](/tutorial-shots/claude-coworks-developer-menu.png)
+
+::: tip
+`Settings` 里的 `Desktop app > Developer` 页面主要用于本地 MCP 服务器，不是本教程要找的第三方推理配置。配置 MaoLao API 时，请以本节截图中的 `Configure Third-Party Inference...` 为准。
+:::
+
+::: warning
+如果左上角菜单里没有 `Developer`，先将 Claude Desktop 更新到最新版后完全退出并重新打开。不同版本和账号开放的功能可能不同；不要随意修改配置文件或在首页直接粘贴 API Key。
+:::
+
+## 第 2 步：确认已打开 Claude Desktop
 
 先打开 Claude Desktop。你看到下面这个 Home 首页，就说明软件已经正常启动。
 
 ![Claude Desktop 首页真实截图](/tutorial-shots/claude-coworks-home.png)
 
-接下来在 Claude Desktop 中进入标题为 `Configure third-party inference` 的配置页面。不同版本的入口位置可能不同，但进入后页面标题、左侧 `Connection` 菜单和右侧字段应与下一张截图一致。
+完成上一步后，会打开标题为 `Configure third-party inference` 的配置窗口。窗口标题、左侧 `Connection` 菜单和右侧字段应与下一张截图一致。
 
-::: tip
-如果你找不到 `Configure third-party inference` 页面，不要随意在 Home 页面填 Key。先更新 Claude Desktop，确认当前版本和账号支持第三方推理配置。
-:::
-
-## 第 2 步：按真实配置页填写 Connection
+## 第 3 步：按真实配置页填写 Connection
 
 进入配置页后，左侧选中 `Connection`。右侧上方的连接类型选择 `Gateway`。
 
@@ -69,7 +86,7 @@
 
 截图下方的 `Artifact preview iframe origin` 可以保持空白，除非你明确在使用 Artifacts 预览功能。
 
-## 第 3 步：先测试连接，再保存
+## 第 4 步：先测试连接，再保存
 
 按下面顺序操作：
 
@@ -86,7 +103,7 @@
 
 能正常回复就表示网关地址和 Key 基础配置已经生效。之后再测试代码解释、文件分析或长对话。
 
-## 第 4 步：模型与额度提醒
+## 第 5 步：模型与额度提醒
 
 | 使用场景 | 建议 |
 | --- | --- |
@@ -102,6 +119,7 @@
 
 <div class="ml-checklist">
 
+- 已从左上角菜单打开 `Developer > Configure Third-Party Inference...`。
 - 已进入 `Configure third-party inference` 页面。
 - Connection 选的是 `Gateway`。
 - Credential kind 选的是 `Static API key`。
