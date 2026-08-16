@@ -35,7 +35,7 @@
 | --- | --- | --- |
 | Cursor | [cursor.com/download](https://cursor.com/download) | Windows 用户选 Windows 版本即可 |
 | Claude Code | [Claude Code 安装文档](https://code.claude.com/docs/en/setup) | 按官方文档安装命令行工具 |
-| Claude Cowork | [Claude 官网](https://claude.com) / [下载页](https://claude.com/download) | 如果没有自定义 API 地址入口，就不能直接接入 |
+| Claude Coworks | [Claude 官网](https://claude.com) / [下载页](https://claude.com/download) | 更新到支持开发者模式和第三方推理供应商的版本 |
 | Codex CLI | [Codex CLI 官方文档](https://developers.openai.com/codex/cli/) / [GitHub](https://github.com/openai/codex) | 先看官方文档，再按系统安装 |
 | OpenClaw | 以当前客户端内官网入口为准 | 版本较多，下载前确认来源 |
 | OpenCode | [opencode.ai](https://opencode.ai) / [GitHub](https://github.com/sst/opencode) | 适合命令行或代码智能体场景 |
@@ -62,7 +62,7 @@
 | 通用 OpenAI 接口、自写代码 | [OpenAI Compatible](/tools/openai-compatible) |
 | Cursor | [Cursor](/tools/cursor) |
 | Claude Code | [Claude Code](/tools/claude-code) |
-| Claude Cowork | [Claude Cowork](/tools/claude-cowork) |
+| Claude Coworks | [Claude Coworks](/tools/claude-cowork) |
 | Codex CLI | [Codex CLI](/tools/codex-cli) |
 | OpenClaw | [OpenClaw](/tools/openclaw) |
 | OpenCode | [OpenCode](/tools/opencode) |

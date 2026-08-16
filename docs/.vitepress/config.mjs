@@ -41,7 +41,7 @@ export default defineConfig({
         items: [
           { text: "OpenAI Compatible", link: "/tools/openai-compatible" },
           { text: "Claude Code", link: "/tools/claude-code" },
-          { text: "Claude Cowork", link: "/tools/claude-cowork" },
+          { text: "Claude Coworks", link: "/tools/claude-cowork" },
           { text: "Codex CLI", link: "/tools/codex-cli" },
           { text: "CC Switch", link: "/tools/cc-switch" },
           { text: "OpenClaw", link: "/tools/openclaw" },
