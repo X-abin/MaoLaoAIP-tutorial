@@ -46,7 +46,6 @@ export default defineConfig({
           { text: "CC Switch", link: "/tools/cc-switch" },
           { text: "OpenCode", link: "/tools/opencode" },
           { text: "Cherry Studio", link: "/tools/cherry-studio" },
-          { text: "Cursor", link: "/tools/cursor" },
           { text: "GitHub Copilot", link: "/tools/github-copilot" },
           { text: "Zed Editor", link: "/tools/zed-editor" },
           { text: "Cline", link: "/tools/cline" },

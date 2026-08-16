@@ -20,7 +20,7 @@
 如果你完全不知道从哪里开始，按这个顺序看就行：
 
 1. 先看 [OpenAI Compatible](/tools/openai-compatible)，记住四个字段：Provider 名称、Base URL、API Key、Model。
-2. 再选择你正在用的软件，例如 [Chatbox](/tools/chatbox)、[Cherry Studio](/tools/cherry-studio)、[Cursor](/tools/cursor)。
+2. 再选择你正在用的软件，例如 [Chatbox](/tools/chatbox)、[Cherry Studio](/tools/cherry-studio)。
 3. 对照页面里的图片，把红色编号位置逐个填完。
 4. 保存后只发一句“请回复 ok”测试，成功后再开始正式使用。
 5. 如果是 Codex 频繁断线，直接看 [Codex CLI](/tools/codex-cli) 里的代理配置图。
@@ -33,7 +33,6 @@
 
 | 软件 | 官方下载地址 | 新手建议 |
 | --- | --- | --- |
-| Cursor | [cursor.com/download](https://cursor.com/download) | Windows 用户选 Windows 版本即可 |
 | Claude Code | [Claude Code 安装文档](https://code.claude.com/docs/en/setup) | 按官方文档安装命令行工具 |
 | Claude Coworks | [Claude 官网](https://claude.com) / [下载页](https://claude.com/download) | 更新到支持开发者模式和第三方推理供应商的版本 |
 | Codex CLI | [Codex CLI 官方文档](https://developers.openai.com/codex/cli/) / [GitHub](https://github.com/openai/codex) | 先看官方文档，再按系统安装 |
@@ -59,7 +58,6 @@
 | 你要接入的工具 | 看哪一页 |
 | --- | --- |
 | 通用 OpenAI 接口、自写代码 | [OpenAI Compatible](/tools/openai-compatible) |
-| Cursor | [Cursor](/tools/cursor) |
 | Claude Code | [Claude Code](/tools/claude-code) |
 | Claude Coworks | [Claude Coworks](/tools/claude-cowork) |
 | Codex CLI | [Codex CLI](/tools/codex-cli) |
