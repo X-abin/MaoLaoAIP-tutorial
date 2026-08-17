@@ -51,7 +51,7 @@
 | WorkBuddy | [官方入口](https://copilot.tencent.com/work/) | 企业版可能限制自定义 Provider |
 | LobeHub / LobeChat | [lobehub.com](https://lobehub.com) / [GitHub](https://github.com/lobehub/lobe-chat) | 适合网页聊天或自部署 |
 | OpenCat | [opencat.app](https://opencat.app) | 移动端和桌面端能力可能不同 |
-| NextChat | [nextchat.club](https://nextchat.club) / [GitHub](https://github.com/ChatGPTNextWeb/NextChat) | 适合有部署经验的用户 |
+| NextChat | [nextchat.club](https://nextchat.club) / [GitHub](https://github.com/ChatGPTNextWeb/NextChat) | 适合网页版使用或自部署；新手优先用官方网页 |
 
 ## 快速判断用哪个教程
 
