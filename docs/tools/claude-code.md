@@ -1,85 +1,107 @@
 # Claude Code
 
-Claude Code 适合代码阅读、修改和项目级任务。接入前先在 MaoLao API 的模型与价格页确认目标模型是否支持 Claude Code 或 Anthropic 相关端点。
+Claude Code 是 Anthropic 的终端编程工具。这个页面按 Windows 官方安装和登录流程编写，截图来自这台电脑上的真实运行结果。
 
 ## 下载地址
 
-- 官方安装文档：[https://code.claude.com/docs/en/setup](https://code.claude.com/docs/en/setup)
-- 新手建议：Claude Code 是命令行工具，不是普通双击安装的软件。先按官方文档完成安装，再回来配置 MaoLao API。
+- 官方安装文档：[https://docs.anthropic.com/en/docs/claude-code/setup](https://docs.anthropic.com/en/docs/claude-code/setup)
+- 官方 GitHub：[https://github.com/anthropics/claude-code](https://github.com/anthropics/claude-code)
+- 新手建议：先把 `claude --version` 跑通，再看 `claude auth status`。这两个最能确认软件是否已经装好。
 
-## 准备工作
+## 安装方式
 
-1. 创建一个 `claude-code` 专用 MaoLao API Key。
-2. 确认模型支持 Claude Code 场景，不要随便拿聊天模型替代。
-3. 准备好 Claude Code 的配置入口，例如环境变量、配置文件或软件内 Provider 设置。
+Windows 上最省事的方式是用 npm 安装：
 
-## 第 1 步：确认接口格式
-
-Claude Code 常见有两类接入方式：
-
-| 接入方式 | 说明 | 适合情况 |
-| --- | --- | --- |
-| Anthropic 原生格式 | 通常走 `/v1/messages` 一类接口 | 客户端明确支持 Anthropic Base URL |
-| OpenAI 兼容格式 | 使用 OpenAI Compatible Provider | 客户端只支持 OpenAI 自定义地址 |
-
-如果 MaoLao API 控制台或模型说明标注了 Claude Code 专用分组，优先使用该分组。
-
-## 第 2 步：创建专用 Key
-
-在控制台令牌页创建 Key 时，建议这样命名：
-
-```text
-claude-code-main
+```powershell
+npm install -g @anthropic-ai/claude-code
 ```
 
-用途写清楚，后续看日志和消耗时会更容易判断是哪台设备、哪个工具产生的请求。
+如果你更喜欢官方原生安装方式，也可以按 Anthropic 的官方安装页操作。
 
-## 第 3 步：填写配置字段
+::: tip
+安装完后如果终端还找不到 `claude`，先把当前 PowerShell 或命令提示符关掉，再重新打开一次。
+:::
 
-<div class="ml-field-table">
-  <div class="ml-field-row">
-    <div>API Key</div>
-    <div>填写 Claude Code 专用 Key。</div>
-    <div>不要和网页聊天、测试脚本混用。</div>
-  </div>
-  <div class="ml-field-row">
-    <div>Base URL</div>
-    <div>按客户端要求填写 MaoLao API 地址。</div>
-    <div>OpenAI 兼容通常为 <code>https://api.maolaoapi.cc/v1</code>。</div>
-  </div>
-  <div class="ml-field-row">
-    <div>模型</div>
-    <div>填写支持 Claude Code 的完整模型名。</div>
-    <div>从模型与价格页复制，不要简写。</div>
-  </div>
-  <div class="ml-field-row">
-    <div>分组</div>
-    <div>优先选择 Claude Code 适配分组或 <code>auto</code>。</div>
-    <div>如果报模型不可用，先查分组权限。</div>
-  </div>
-</div>
+## 第 1 步：确认版本
 
-## 第 4 步：先做小任务测试
+安装完成后先检查版本：
 
-第一次不要直接让 Claude Code 扫描大项目。推荐按下面顺序：
+```powershell
+claude --version
+```
 
-1. 在一个小文件里写几行代码。
-2. 让 Claude Code 解释这段代码。
-3. 再让它做一个很小的修改。
-4. 确认请求稳定、消耗正常后，再处理真实项目。
+本机显示的是：
 
-## 成本与稳定性建议
+![Claude Code 版本检查真实截图](/tutorial-shots/claude-code-version-status.png)
 
-- 长上下文任务消耗会明显增加，建议给 Key 设置额度上限。
-- 大项目先描述目标，再让工具按目录逐步读取，不要一开始就全量分析。
-- 如果客户端支持多个模型档位，可以把快模型和强模型分开配置。
-- 遇到错误时先看返回信息，是认证、模型、网络还是额度问题。
+如果能看到版本号，说明 Claude Code 已经装好。
+
+## 第 2 步：确认登录状态
+
+再检查登录状态：
+
+```powershell
+claude auth status
+```
+
+本机当前状态是已登录：
+
+![Claude Code 登录状态真实截图](/tutorial-shots/claude-code-auth-status.png)
+
+输出里的 `loggedIn: true` 代表认证已经完成。
+
+## 第 3 步：如果还没登录
+
+如果你的输出不是 `loggedIn: true`，就执行：
+
+```powershell
+claude auth login
+```
+
+`claude auth login --help` 里还显示了两个常见方式：
+
+- `--claudeai`：使用 Claude 订阅登录，默认就是这个
+- `--console`：改用 Anthropic Console 计费
+
+## 第 4 步：跑健康检查
+
+安装和登录都完成后，再执行：
+
+```powershell
+claude doctor
+```
+
+如果看到 `No installation issues found.`，说明安装本身没问题。  
+如果还提示 Remote Control 相关信息，那通常是在提醒云端/远程能力状态，不一定代表本地 CLI 装坏了。
+
+## 第 5 步：开始用
+
+最简单的测试方式是进入一个小目录后直接启动：
+
+```powershell
+claude
+```
+
+先让它做一件很小的事，比如解释当前目录，确认输出正常后再接项目。
 
 ## 常见问题
 
-| 现象 | 可能原因 | 解决方法 |
-| --- | --- | --- |
-| 认证失败 | Key 填错或 Key 被禁用 | 重新复制 Key，确认没有空格 |
-| 模型不可用 | 模型名不完整或分组不支持 | 回到模型与价格页复制模型名，并检查 Key 分组 |
-| 上下文很贵 | 一次性读取太多文件 | 拆小任务，减少无关文件 |
-| 工具不支持自定义地址 | 当前版本只支持官方地址 | 更换支持自定义 Provider 的版本或接入方式 |
+| 现象 | 处理方法 |
+| --- | --- |
+| `claude` 不是命令 | 关闭当前终端重新打开，再查一次 `claude --version` |
+| `auth status` 不是 `loggedIn: true` | 运行 `claude auth login` 重新登录 |
+| `doctor` 提示 Remote Control | 先看自己是否需要云端远程能力；如果只是本地 CLI 使用，通常不影响安装 |
+| 命令输出很长 | 先用 `claude --version` 和 `claude auth status`，这两个最直观 |
+| 想重新安装 | 可执行 `claude install latest`，或重新跑官方安装文档里的安装方式 |
+
+## 配置检查清单
+
+<div class="ml-checklist">
+
+- 已按官方文档安装 Claude Code。
+- `claude --version` 能输出版本号。
+- `claude auth status` 显示 `loggedIn: true`。
+- 必要时已执行 `claude auth login`。
+- 已跑过 `claude doctor` 确认安装健康。
+
+</div>
