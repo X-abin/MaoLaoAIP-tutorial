@@ -1,6 +1,6 @@
 # CodeBuddy
 
-CodeBuddy 是腾讯推出的 AI 代码编辑器，适合做代码解释、补全、重构、项目问答和 Agent 编程任务。本教程按本机 Windows 版 CodeBuddy `4.10.4` 的真实启动流程编写。
+CodeBuddy 是腾讯推出的 AI 代码编辑器，适合做代码解释、补全、重构、项目问答和 Agent 编程任务。本教程按本机 Windows 版 CodeBuddy `4.10.4` 的真实界面编写。
 
 ## 下载地址
 
@@ -10,11 +10,19 @@ CodeBuddy 是腾讯推出的 AI 代码编辑器，适合做代码解释、补全
 
 ## 准备工作
 
-1. 在 MaoLao API 控制台创建 API Key。
-2. 在“模型与价格”页复制一个适合代码任务的完整模型 ID。
-3. 准备一个 CodeBuddy 账号。当前版本必须先登录，未登录时看不到自定义模型配置入口。
+开始前先准备好三样东西：
 
-## 第 1 步：启动 CodeBuddy
+| 需要准备 | 从哪里拿 |
+| --- | --- |
+| MaoLao API Key | MaoLao API 控制台的 API Key 页面 |
+| 模型 ID | MaoLao API 控制台的模型与价格页面 |
+| CodeBuddy 账号 | CodeBuddy 登录页，可用 Google、GitHub 等方式登录 |
+
+::: tip 新手提醒
+API Key 相当于你的账户密码，不要发给别人，也不要把明文 Key 截图上传到 GitHub。
+:::
+
+## 第 1 步：启动并登录 CodeBuddy
 
 在 Windows 桌面或开始菜单打开 CodeBuddy。本机安装路径示例：
 
@@ -22,96 +30,119 @@ CodeBuddy 是腾讯推出的 AI 代码编辑器，适合做代码解释、补全
 E:\maolaoAPI接入软件\CodeBuddy\CodeBuddy.exe
 ```
 
-第一次打开时会看到“导入配置”页面，可以选择从 VS Code / Cursor 导入，也可以点“跳过”。
+第一次打开时会看到“导入配置”页面，可以选择从 VS Code / Cursor 导入，也可以直接点“跳过”。
 
 ![CodeBuddy 导入配置真实截图](/tutorial-shots/codebuddy-live-home.png)
 
-跳过后会进入登录前页面。
+跳过后进入登录页，点击“登录”。如果 CodeBuddy 没有自动打开浏览器，可以点击页面里的“在浏览器中打开”。
 
 ![CodeBuddy 登录前页面真实截图](/tutorial-shots/codebuddy-live-after-skip.png)
 
-## 第 2 步：登录 CodeBuddy
-
-点击“登录”。如果 CodeBuddy 没有自动打开浏览器，可以点击页面里的“在浏览器中打开”。
-
 ![CodeBuddy 登录中真实截图](/tutorial-shots/codebuddy-live-login.png)
 
-浏览器中会打开 CodeBuddy 登录页。按你的账号情况选择 Google、GitHub 或 X 登录。
+浏览器中会打开 CodeBuddy 登录页，按你的账号情况选择 Google、GitHub 或 X 登录。
 
 ![CodeBuddy 浏览器登录页真实截图](/tutorial-shots/codebuddy-live-browser-login-cropped.png)
 
-> 说明：我没有代登录你的账号，所以没有继续进入账号内的模型配置页截图。当前本机可确认的是：未登录状态只能停在登录页，登录后才会出现自定义模型相关入口。
+登录成功后，回到 CodeBuddy，会进入主界面。
 
-## 第 3 步：进入自定义模型入口
+![CodeBuddy 登录后主界面真实截图](/tutorial-shots/codebuddy-live-main.png)
 
-登录成功后，回到 CodeBuddy IDE，在左侧 CodeBuddy / Chat 面板或设置页中找到模型相关入口。不同版本可能显示为：
+## 第 2 步：打开 Agents 面板
 
-- `Models`
-- `Model Settings`
-- `Custom Model`
-- `自定义模型`
-- `添加模型`
+在左侧进入 CodeBuddy 的 `Agents` 面板。这个页面底部会有当前模型选择器，默认可能显示 `Default`。
 
-本机 CodeBuddy 自带配置中已经包含 `Custom` 提供商，并支持下面这些字段：
+![CodeBuddy Agents 面板真实截图](/tutorial-shots/codebuddy-live-agents-panel.png)
 
-- `Provider`
-- `Base URL`
-- `Model Name`
-- `API Key`
+点击底部的模型名称，会弹出模型列表。列表里能看到 `Default`、`Fast`、`Balanced`、`Primary`、`Deep` 等内置模型，最下面有 `+ 配置自定义模型`。
 
-因此接入 MaoLao API 时，优先选择 `Custom`，不要选择只读的官方 `OpenAI` 提供商。
+![CodeBuddy 模型菜单真实截图](/tutorial-shots/codebuddy-live-model-menu.png)
+
+点击 `+ 配置自定义模型`。
+
+## 第 3 步：添加自定义模型
+
+进入模型设置后，点击右侧的 `+ 添加模型`。
+
+![CodeBuddy 添加模型入口真实截图](/tutorial-shots/codebuddy-live-custom-model-settings.png)
+
+弹窗标题是 `添加模型`，并提示 `仅支持 OpenAI 兼容协议 API`。这说明 MaoLao API 这类 OpenAI 兼容接口可以接入。
+
+打开“提供商”下拉框，向下找到 `自定义 API`。如果列表太长，可以在搜索框输入 `自定义 API`，然后点击筛选出来的唯一结果。
+
+![CodeBuddy 提供商下拉框真实截图](/tutorial-shots/codebuddy-live-provider-dropdown.png)
+
+![CodeBuddy 搜索自定义 API 真实截图](/tutorial-shots/codebuddy-live-custom-api-filtered.png)
 
 ## 第 4 步：填写 MaoLao API 信息
 
-添加自定义模型时按下面填写：
+选择 `自定义 API` 后，在这个添加模型弹窗里填写下面内容：
 
 <div class="ml-field-table">
   <div class="ml-field-row">
-    <div>字段</div>
+    <div>位置</div>
     <div>填写内容</div>
-    <div>说明</div>
+    <div>怎么填</div>
   </div>
   <div class="ml-field-row">
-    <div>Provider</div>
-    <div><code>Custom</code></div>
-    <div>选择可编辑 Base URL 的自定义提供商。</div>
-  </div>
-  <div class="ml-field-row">
-    <div>Base URL</div>
+    <div>接口地址 / Base URL</div>
     <div><code>https://api.maolaoapi.cc/v1/chat/completions</code></div>
-    <div>CodeBuddy 的自定义模型字段示例是完整 Chat Completions 地址，因此这里填完整路径。</div>
+    <div>CodeBuddy 的示例地址是完整 <code>/chat/completions</code> 路径，所以这里也填完整地址。</div>
   </div>
   <div class="ml-field-row">
-    <div>Model Name</div>
-    <div>完整模型 ID</div>
-    <div>从 MaoLao API 控制台复制，必须完全一致。</div>
+    <div>提供商</div>
+    <div><code>自定义 API</code></div>
+    <div>不要选腾讯云、Kimi、智谱等内置供应商。</div>
   </div>
   <div class="ml-field-row">
     <div>API Key</div>
     <div>你的 MaoLao API Key</div>
-    <div>不要发给别人，不要上传 GitHub，不要截图明文展示。</div>
+    <div>粘贴后确认前后没有空格；教程截图不要展示明文 Key。</div>
+  </div>
+  <div class="ml-field-row">
+    <div>模型名称</div>
+    <div>完整模型 ID</div>
+    <div>从 MaoLao API 控制台复制，必须和控制台显示完全一致。</div>
   </div>
 </div>
 
-如果界面里有能力开关，可以先这样选择：
+填写时可以按这个顺序来：
 
-| 选项 | 建议 |
-| --- | --- |
-| Tool / Function Calling | 模型支持工具调用时开启，不确定先关闭 |
-| Vision / Images | 普通代码模型先关闭 |
-| Reasoning | 推理模型开启，普通模型可关闭 |
+1. 先把接口地址改成 `https://api.maolaoapi.cc/v1/chat/completions`。
+2. 提供商选择 `自定义 API`。
+3. 在带“小眼睛”图标的输入框里粘贴 MaoLao API Key。
+4. 在“模型名称”里填写或选择你要用的完整模型 ID。
+5. 点右下角 `保存`。
 
-保存后，在模型列表中选择刚添加的 MaoLao API 模型。
+::: warning 不要随便保存测试 Key
+如果你只是照着教程练习，API Key 还没准备好，就先不要点保存。等 Key 和模型 ID 都确认正确后再保存。
+:::
 
-## 第 5 步：测试代码能力
+## 第 5 步：切换到 MaoLao 模型
 
-新手建议用三个小测试判断是否配置成功：
+保存后回到 Agents 面板，再点击底部模型选择器。
 
-1. 选中一小段代码，让它解释作用。
-2. 让它给一个函数补充注释。
-3. 让它指出一段明显错误代码的问题。
+如果配置成功，你刚刚添加的模型会出现在模型列表里。选择它之后，再开始提问或让 CodeBuddy 处理代码。
 
-这三项都正常后，再开始做项目级重构或大文件分析。
+## 第 6 步：做一个最小测试
+
+新手建议先用很小的问题测试，不要一上来就让它分析整个项目。
+
+可以按顺序试这三句话：
+
+```text
+请用一句话解释这个函数的作用。
+```
+
+```text
+请帮我给这段代码补充中文注释。
+```
+
+```text
+这段代码哪里可能会报错？请只列出最重要的 3 个问题。
+```
+
+三个测试都能正常回答，再继续让它做重构、生成文件或分析大项目。
 
 ## 推荐模型选择
 
@@ -126,9 +157,10 @@ E:\maolaoAPI接入软件\CodeBuddy\CodeBuddy.exe
 
 | 现象 | 处理方法 |
 | --- | --- |
-| 只看到登录页 | 先完成 CodeBuddy 账号登录，未登录状态看不到自定义模型入口。 |
-| 登录后没有 Base URL 输入框 | 不要选官方 OpenAI，改找 `Custom` / `自定义模型` 入口。 |
+| 找不到自定义模型入口 | 先登录 CodeBuddy，再进入 Agents 面板底部的模型下拉菜单。 |
+| 下拉列表里供应商太多 | 在提供商搜索框输入 `自定义 API`，再点击筛选出来的结果。 |
+| 没有 Base URL 输入框 | 说明还没有选到 `自定义 API`，不要选腾讯云、Kimi、智谱等内置供应商。 |
 | 提示模型不存在 | 从 MaoLao API 控制台重新复制完整模型 ID。 |
-| 提示鉴权失败 | 重新复制 API Key，确认前后没有空格。 |
-| 代码回答不稳定 | 换更适合代码任务的模型，并减少一次性传入的文件数量。 |
+| 提示鉴权失败 | 重新复制 API Key，确认前后没有空格，Key 没有被删除或停用。 |
+| 回答很慢 | 换速度更快的模型，或减少一次性发送的代码文件数量。 |
 | 额度消耗异常 | 检查是否开启自动补全、后台索引或连续重试。 |
