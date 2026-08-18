@@ -135,6 +135,11 @@ body {
   background-image: url("/tool-icons/openai.svg");
 }
 
+.VPSidebarItem.level-1 .link[href*="/tools/choose-tool"] .text::before {
+  content: "";
+  background-image: url("/tool-icons/help.svg");
+}
+
 .VPSidebarItem.level-1 .link[href*="/tools/cursor"] .text::before {
   content: "";
   background-image: url("/tool-icons/cursor.ico");

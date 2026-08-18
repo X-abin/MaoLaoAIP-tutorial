@@ -164,3 +164,19 @@ E:\maolaoAPI接入软件\CodeBuddy\CodeBuddy.exe
 | 提示鉴权失败 | 重新复制 API Key，确认前后没有空格，Key 没有被删除或停用。 |
 | 回答很慢 | 换速度更快的模型，或减少一次性发送的代码文件数量。 |
 | 额度消耗异常 | 检查是否开启自动补全、后台索引或连续重试。 |
+
+## 配置检查清单
+
+<div class="ml-checklist">
+
+- 已登录 CodeBuddy。
+- 已进入 `Agents` 面板底部的模型选择器。
+- 已点击 `+ 配置自定义模型`。
+- 提供商选择的是 `自定义 API`。
+- 接口地址填写 `https://api.maolaoapi.cc/v1/chat/completions`。
+- API Key 填写在带“小眼睛”图标的密钥输入框。
+- 模型名称填写 MaoLao API 控制台里的完整模型 ID。
+- 已保存并在 Agents 面板切换到该模型。
+- 已用小问题完成首次测试。
+
+</div>

@@ -37,6 +37,7 @@ export default defineConfig({
       {
         text: "工具接入",
         items: [
+          { text: "怎么选工具", link: "/tools/choose-tool" },
           { text: "OpenAI Compatible", link: "/tools/openai-compatible" },
           { text: "Claude Code", link: "/tools/claude-code" },
           { text: "Claude Coworks", link: "/tools/claude-cowork" },

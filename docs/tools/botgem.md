@@ -141,3 +141,18 @@ https://api.maolaoapi.cc/v1/chat/completions
 | 提示模型不存在 | 从 MaoLao API 控制台重新复制完整模型 ID。 |
 | Models 下拉没有内容 | 直接在 `Models` 输入框手动输入完整模型 ID。 |
 | 回答消耗偏高 | 减少历史上下文，避免一次性发送太长内容。 |
+
+## 配置检查清单
+
+<div class="ml-checklist">
+
+- 已进入 `设置 → Service Provider`。
+- 已点击右上角加号。
+- 服务商选择的是 `Other / OpenAI compatible API`。
+- Name 填写 `MaoLao API`。
+- API Server 填写 `https://api.maolaoapi.cc`，没有添加 `/v1`。
+- API Key 填写的是 MaoLao API 控制台创建的 Key。
+- Models 填写完整模型 ID。
+- 已点击 `检查连接` 或保存后用短消息测试。
+
+</div>

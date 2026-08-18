@@ -109,3 +109,18 @@ Chatbox 的连续对话会携带历史内容。对新手来说，最容易忽略
 | 提示模型不存在 | 从 MaoLao API 控制台重新复制完整模型名 |
 | 提示无权限 | 检查 Key 分组是否支持该模型 |
 | 消耗偏高 | 减少连续历史，必要时新建对话 |
+
+## 配置检查清单
+
+<div class="ml-checklist">
+
+- 已在 Chatbox 里进入 `设置 → 模型提供方`。
+- 已选择或新增 `OpenAI` 提供方。
+- API 密钥填写的是 MaoLao API Key。
+- API 主机填写 `https://api.maolaoapi.cc`，没有额外添加 `/v1`。
+- 预览地址显示为 `/v1/chat/completions`。
+- 已新增完整模型 ID。
+- 已把默认模型切换成刚刚添加的模型。
+- 已用一句短消息完成首次测试。
+
+</div>

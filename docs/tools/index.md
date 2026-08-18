@@ -1,6 +1,19 @@
 # 工具接入
 
-这一组文档用于把 MaoLao API 接入常见客户端和开发工具。除非单页特别说明，默认使用 OpenAI 兼容配置：
+这一组文档用于把 MaoLao API 接入常见客户端和开发工具。新手不要从软件下载表开始乱点，建议先看 [怎么选工具](/tools/choose-tool)，确定自己要配置哪一类软件。
+
+## 先走这条新手路线
+
+| 顺序 | 要做什么 | 对应页面 |
+| --- | --- | --- |
+| 1 | 按聊天、写代码、VS Code、自部署等用途选择教程 | [怎么选工具](/tools/choose-tool) |
+| 2 | 为每个软件单独创建 API Key，方便排查和控制额度 | [创建 API Key](/api-key) |
+| 3 | 先弄懂 Base URL、API Key、Model 三个核心字段 | [OpenAI Compatible](/tools/openai-compatible) |
+| 4 | 遇到无响应、模型不存在、频繁断线时按清单排查 | [常见问题排查](/tools/troubleshooting) |
+
+## 通用填写规则
+
+除非单页特别说明，默认使用 OpenAI 兼容配置：
 
 | 配置项 | 推荐值 |
 | --- | --- |
@@ -15,15 +28,15 @@
 2. 在对应软件教程中确认接口格式、模型填写位置和分组要求。
 3. 第一次配置时优先使用 `auto` 分组，跑通后再按工具单独拆 Key。
 
-## 小白图文配置顺序
+## 小白图文配置方法
 
-如果你完全不知道从哪里开始，按这个顺序看就行：
+每篇软件教程都按这个方式读：
 
-1. 先看 [OpenAI Compatible](/tools/openai-compatible)，记住四个字段：Provider 名称、Base URL、API Key、Model。
-2. 再选择你正在用的软件，例如 [Chatbox](/tools/chatbox)、[Cherry Studio](/tools/cherry-studio)。
-3. 对照页面里的图片，把红色编号位置逐个填完。
-4. 保存后只发一句“请回复 ok”测试，成功后再开始正式使用。
-5. 如果是 Codex 频繁断线，直接看 [Codex CLI](/tools/codex-cli) 里的代理配置图。
+1. 先看下载地址，确认软件来源。
+2. 再看准备工作，把 Key、Base URL、模型 ID 准备好。
+3. 对照图片逐步填写，不要跳过中间步骤。
+4. 保存后只发一句“请回复 ok”测试。
+5. 失败时先看本页底部排查顺序，再看对应软件的常见问题。
 
 ![MaoLao API 通用 Provider 配置示意图](/tutorial-shots/common-provider.svg)
 
