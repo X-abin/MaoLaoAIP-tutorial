@@ -121,8 +121,7 @@ function formatPrice(model) {
         <tbody>
           <tr v-for="group in groupRows" :key="group.key">
             <td>
-              <strong>{{ group.name }}</strong><br />
-              <code>{{ group.key }}</code>
+              <strong>{{ group.name }}</strong>
             </td>
             <td>{{ formatRatio(group.ratio) }}</td>
             <td>{{ group.description }}</td>
