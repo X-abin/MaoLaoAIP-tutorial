@@ -66,6 +66,10 @@ function formatPrice(model) {
 
   return `输入 ${formatRatio(model.modelRatio)}，输出 x${formatRatio(model.completionRatio || 1)}`;
 }
+
+function formatGroupName(group) {
+  return pricing.groupNames?.[group] || group;
+}
 </script>
 
 <template>
@@ -165,7 +169,9 @@ function formatPrice(model) {
             <td>{{ formatPrice(model) }}</td>
             <td>
               <div class="ml-chip-list">
-                <span v-for="group in model.enableGroups" :key="group" class="ml-chip">{{ group }}</span>
+                <span v-for="group in model.enableGroups" :key="group" class="ml-chip">
+                  {{ formatGroupName(group) }}
+                </span>
               </div>
             </td>
             <td>
