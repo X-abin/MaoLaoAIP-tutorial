@@ -24,7 +24,7 @@ API Key 是你调用 MaoLao API 的凭证。任何拿到 Key 的人都可能消�
 - `CC-MAX` / `CC-KIRO`：偏 Claude Code 或 Anthropic 相关场景。
 - `生图视频专用分组`：适合图像或视频任务。
 
-具体名称和倍率会变化，最终以 [模型与价格](/models-pricing) 中同步到的最新快照为准。
+具体名称和倍率会变化，最终以 MaoLao API 控制台当前显示的可用分组和模型为准。
 
 ## 建议的 Key 管理方式
 

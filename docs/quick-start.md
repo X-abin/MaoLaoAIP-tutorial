@@ -30,7 +30,7 @@
 
 ## 4. 选择模型
 
-进入 [模型与价格](/models-pricing) 查看当前可用模型。新手可以按用途选择：
+在 MaoLao API 控制台或目标软件的模型选择框中，选择当前可用模型。新手可以按用途选择：
 
 - 日常对话和文本生成：搜索 `gpt`、`claude`、`deepseek`。
 - 代码协作：搜索 `codex`、`claude-sonnet`。
@@ -40,7 +40,7 @@
 
 ## 5. 发起第一次请求
 
-下面是 OpenAI 兼容接口的最小示例。把 `YOUR_API_KEY` 换成你自己的 Key，把模型名换成模型价格页里实际存在的模型。
+下面是 OpenAI 兼容接口的最小示例。把 `YOUR_API_KEY` 换成你自己的 Key，把模型名换成控制台或目标软件当前支持的模型。
 
 ```bash
 curl https://api.maolaoapi.cc/v1/chat/completions \
@@ -60,7 +60,7 @@ curl https://api.maolaoapi.cc/v1/chat/completions \
 | --- | --- |
 | API Key | 控制台创建的 Key |
 | Base URL | `https://api.maolaoapi.cc/v1` |
-| Model | 模型价格页中的模型名 |
+| Model | 控制台或目标软件支持的模型名 |
 
 ## 常见第一次失败原因
 

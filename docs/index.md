@@ -13,14 +13,14 @@ hero:
       text: 快速开始
       link: /quick-start
     - theme: alt
-      text: 查看模型价格
-      link: /models-pricing
+      text: 查看工具教程
+      link: /tools/
 
 features:
   - title: 面向新手
     details: 尽量用直白步骤解释 API Key、Base URL、模型名、分组和额度，不假设你已经熟悉开发工具。
-  - title: 数据可更新
-    details: 模型、价格、分组和公告来自公开接口快照，后续站点变更时可以重新同步。
+  - title: 内容清晰
+    details: 按注册、创建 API Key、客户端配置和问题排查拆分，适合第一次接触 API 的用户。
   - title: 可维护项目
     details: 使用 VitePress、异步数据脚本和 GitHub Pages 工作流组织，适合长期维护。
 ---
@@ -46,4 +46,4 @@ MaoLao API 是一个 AI 模型聚合与分发网关。它把不同模型服务�
 
 ## 阅读顺序
 
-建议从 [快速开始](/quick-start) 开始，完成一次最小可用调用；然后阅读 [创建 API Key](/api-key) 和 [计费与额度](/billing-quota)。如果你已经会配置客户端，可以直接去 [模型与价格](/models-pricing) 查询模型和分组。
+建议从 [快速开始](/quick-start) 开始，完成一次最小可用调用；然后阅读 [创建 API Key](/api-key) 和 [计费与额度](/billing-quota)。如果你已经会配置客户端，可以直接进入 [工具接入](/tools/) 查看对应软件的图文教程。

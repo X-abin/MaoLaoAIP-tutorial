@@ -20,7 +20,6 @@ export default defineConfig({
     nav: [
       { text: "快速开始", link: "/quick-start" },
       { text: "API Key", link: "/api-key" },
-      { text: "模型与价格", link: "/models-pricing" },
       { text: "计费与额度", link: "/billing-quota" },
       { text: "工具接入", link: "/tools/" },
       { text: "账户与订阅", link: "/account/" },
@@ -32,7 +31,6 @@ export default defineConfig({
           { text: "产品介绍", link: "/" },
           { text: "快速开始", link: "/quick-start" },
           { text: "创建 API Key", link: "/api-key" },
-          { text: "模型与价格", link: "/models-pricing" },
           { text: "计费与额度", link: "/billing-quota" },
         ],
       },

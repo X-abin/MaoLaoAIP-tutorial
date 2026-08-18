@@ -7,12 +7,12 @@
 | Base URL | `https://api.maolaoapi.cc/v1` |
 | 备用 Base URL | `https://api.maolaoapi.com/v1` |
 | API Key | 控制台令牌页创建的 Key |
-| 模型名 | 在模型与价格页复制完整模型名 |
+| 模型名 | 根据目标软件支持的模型填写 |
 
 接入前建议先完成三件事：
 
 1. 在 [创建 API Key](/api-key) 页面创建独立 Key。
-2. 在 [模型与价格](/models-pricing) 确认模型支持的端点类型和分组。
+2. 在对应软件教程中确认接口格式、模型填写位置和分组要求。
 3. 第一次配置时优先使用 `auto` 分组，跑通后再按工具单独拆 Key。
 
 ## 小白图文配置顺序
