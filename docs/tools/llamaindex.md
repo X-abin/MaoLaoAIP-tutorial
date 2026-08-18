@@ -14,7 +14,7 @@ LlamaIndex 是用于构建 RAG、知识库和智能体应用的开发框架，�
 | --- | --- |
 | API Key | MaoLao API Key |
 | Base URL | `https://api.maolaoapi.cc/v1` |
-| Model | 模型与价格页中的完整模型名 |
+| Model | MaoLao API 控制台里的完整模型名 |
 
 ## 使用建议
 

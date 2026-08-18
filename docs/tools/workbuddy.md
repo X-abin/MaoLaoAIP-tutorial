@@ -16,7 +16,7 @@ WorkBuddy 是腾讯的 AI Agent 办公工具。本教程按本机 WorkBuddy `v5.
 ## 准备工作
 
 1. 在 MaoLao API 控制台创建 API Key。
-2. 在“模型与价格”页复制一个完整模型 ID。
+2. 在MaoLao API 控制台复制一个完整模型 ID。
 3. 关闭正在编辑的 WorkBuddy 任务，避免修改配置时丢失未保存内容。
 
 ## 第 1 步：打开 WorkBuddy 设置

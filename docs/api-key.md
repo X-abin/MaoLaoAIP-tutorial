@@ -20,7 +20,7 @@ API Key 是你调用 MaoLao API 的凭证。任何拿到 Key 的人都可能消�
 公开配置显示 MaoLao API 支持多个分组，并且默认启用自动分组。对新手来说：
 
 - `auto`：适合大多数情况，失败时可按配置切换可用分组。
-- `Codex-Basic` / `Codex-Value` / `Codex-Official`：偏 Codex 场景，不同分组在价格、稳定性和限制上不同。
+- `Codex-Basic` / `Codex-Value` / `Codex-Official`：偏 Codex 场景，不同分组在消耗、稳定性和限制上不同。
 - `CC-MAX` / `CC-KIRO`：偏 Claude Code 或 Anthropic 相关场景。
 - `生图视频专用分组`：适合图像或视频任务。
 

@@ -15,7 +15,7 @@ Cherry Studio 可以在“模型服务”里新增自定义提供商。本页根
 
 1. MaoLao API 控制台创建的专用 Key。
 2. API 根地址：`https://api.maolaoapi.cc`。
-3. MaoLao API“模型与价格”页面中可用的完整模型 ID。
+3. MaoLao API 控制台中可用的完整模型 ID。
 
 ::: warning
 Cherry Studio 的新增表单填写的是“API 根地址”，不是完整接口地址。不要在这一步填写 `/v1/chat/completions`。
@@ -95,7 +95,7 @@ https://api.maolaoapi.cc/v1/chat/completions
 
 | 真实字段 | 怎么填写 |
 | --- | --- |
-| 模型 ID | 复制 MaoLao API“模型与价格”页面显示的完整模型 ID。 |
+| 模型 ID | 复制 MaoLao API 控制台显示的完整模型 ID。 |
 | 模型名称 | 填一个容易识别的名称，例如 `MaoLao 日常代码`。 |
 | 分组名称 | 可以填写 `GPT`、`Claude` 或 `常用模型`，用于本地分类。 |
 | 端点类型 | 选择 `OpenAI`。 |

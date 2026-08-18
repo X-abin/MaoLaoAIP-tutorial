@@ -16,7 +16,7 @@ LobeHub 常见产品是 LobeChat。它可以通过 OpenAI 兼容方式接入第�
 
 1. MaoLao API 控制台创建的 API Key。
 2. MaoLao API 当前可用的接入地址。
-3. “模型与价格”页面里可以使用的完整模型 ID。
+3. MaoLao API 控制台里可以使用的完整模型 ID。
 
 ::: warning
 API Key 只填写在 LobeHub 的 `API Key` 输入框里。不要把真实 Key 写进截图、文档、聊天记录或公开仓库。
@@ -63,7 +63,7 @@ API Key 只填写在 LobeHub 的 `API Key` 输入框里。不要把真实 Key �
   <div class="ml-field-row">
     <div>连通性检查</div>
     <div>选择或填写一个 MaoLao API 支持的模型。</div>
-    <div>不知道填什么时，先到“模型与价格”页复制一个完整模型 ID。</div>
+    <div>不知道填什么时，先到MaoLao API 控制台复制一个完整模型 ID。</div>
   </div>
 </div>
 
@@ -113,7 +113,7 @@ LobeHub 这个位置叫 `API 代理地址`，不是模型名称。不要把模�
 | 提示 API Key 错误 | 重新从 MaoLao API 控制台复制 Key，确认前后没有空格 |
 | 提示代理地址错误 | `API 代理地址` 必须包含 `https://`，不要填成模型名或完整接口路径 |
 | 获取不到模型列表 | 检查 Key 是否有额度、模型权限是否开放、网络是否能访问 MaoLao API |
-| 发送消息提示模型不存在 | 到 MaoLao API“模型与价格”页重新复制完整模型 ID |
+| 发送消息提示模型不存在 | 到 MaoLao API 控制台重新复制完整模型 ID |
 | 配置后还是走原来的模型 | 回到 `服务模型` 页面，把默认模型改成刚刚启用的模型 |
 | 软件频繁 Reconnect | 先检查网络和代理软件；必要时退出 LobeHub 后重新打开，再测试一条短消息 |
 

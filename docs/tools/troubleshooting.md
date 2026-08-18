@@ -7,7 +7,7 @@
 | Base URL | 包含 `/v1` |
 | API Key | 以控制台创建的完整 Key 为准 |
 | 鉴权头 | `Authorization: Bearer YOUR_API_KEY` |
-| 模型名 | 和模型与价格页完全一致 |
+| 模型名 | 和 MaoLao API 控制台里的完整模型 ID 完全一致 |
 | 分组 | 当前 Key 的分组支持该模型 |
 | 接口格式 | OpenAI、Anthropic、Responses 不要混用 |
 

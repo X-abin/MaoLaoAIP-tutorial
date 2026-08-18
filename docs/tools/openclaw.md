@@ -23,7 +23,7 @@ OpenClaw 是代码或智能体相关工具时，接入重点是确认它支持�
 3. 新增 OpenAI Compatible Provider。
 4. Base URL 填 `https://api.maolaoapi.cc/v1`。
 5. API Key 填 MaoLao API Key。
-6. 模型名填写模型与价格页中的完整名称。
+6. 模型名填写 MaoLao API 控制台中的完整名称。
 7. 保存后用短问题测试。
 
 ## 常见问题

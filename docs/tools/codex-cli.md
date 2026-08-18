@@ -134,7 +134,7 @@ notepad "$HOME\.codex\config.toml"
 
 ## 第 5 步：写入 MaoLao API 配置
 
-把下面配置复制到 `config.toml`。其中 `<模型ID>` 必须替换成 MaoLao API“模型与价格”页面显示的完整模型名：
+把下面配置复制到 `config.toml`。其中 `<模型ID>` 必须替换成 MaoLao API 控制台显示的完整模型名：
 
 ```toml
 model_provider = "maolao"
@@ -158,7 +158,7 @@ wire_api = "responses"
   </div>
   <div class="ml-field-row">
     <div>model</div>
-    <div>填写 MaoLao API 模型与价格页的完整模型 ID。</div>
+    <div>填写 MaoLao API 控制台的完整模型 ID。</div>
     <div>不要自行猜模型名，也不要只写简称。</div>
   </div>
   <div class="ml-field-row">
@@ -256,7 +256,7 @@ npm install -g @openai/codex
 
 ### 返回模型不存在
 
-不要直接照抄其他教程的模型名。进入 MaoLao API“模型与价格”页面，复制当前账号分组可以使用的完整模型 ID，并替换：
+不要直接照抄其他教程的模型名。进入 MaoLao API 控制台，复制当前账号分组可以使用的完整模型 ID，并替换：
 
 ```toml
 model = "<模型ID>"
@@ -305,7 +305,7 @@ codex
 - `model_provider` 与 `[model_providers.maolao]` 名称一致。
 - `base_url` 以 `/v1` 结尾，没有重复添加接口路径。
 - `wire_api` 写成 `responses`。
-- `model` 使用 MaoLao API 模型与价格页中的完整模型 ID。
+- `model` 使用 MaoLao API 控制台中的完整模型 ID。
 - 已在小项目中完成首次测试。
 
 </div>

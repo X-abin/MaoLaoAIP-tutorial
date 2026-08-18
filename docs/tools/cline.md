@@ -14,7 +14,7 @@ Cline 是安装在 VS Code 里的 AI 编程助手。配置好 MaoLao API 后，�
 
 1. 电脑里已经安装 VS Code。
 2. 已经在 MaoLao API 控制台创建好 API Key。
-3. 知道你要使用的模型名称，例如控制台模型价格页里显示的完整模型 ID。
+3. 知道你要使用的模型名称，例如 MaoLao API 控制台里显示的完整模型 ID。
 
 ## 第 1 步：在 VS Code 找到 Cline
 

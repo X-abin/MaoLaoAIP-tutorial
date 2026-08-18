@@ -15,7 +15,7 @@ OpenAI Compatible 不是一个单独软件，所以不需要下载。你只要�
 ## 准备工作
 
 1. 打开 MaoLao API 控制台，在令牌页创建一个专用 Key。
-2. 在模型与价格页复制你要用的完整模型名。
+2. 在 MaoLao API 控制台复制你要用的完整模型名。
 3. 准备一个可以发 HTTP 请求的工具，例如终端、Apifox、Postman 或代码编辑器。
 
 <div class="ml-callout">
@@ -46,7 +46,7 @@ OpenAI Compatible 不是一个单独软件，所以不需要下载。你只要�
   </div>
   <div class="ml-field-row">
     <div>模型名</div>
-    <div>从模型与价格页复制完整名称。</div>
+    <div>从 MaoLao API 控制台复制完整名称。</div>
     <div>不要自己改大小写或简写。</div>
   </div>
 </div>
@@ -107,7 +107,7 @@ console.log(await response.json());
 
 - Base URL 已经包含 `/v1`。
 - 请求头里有 `Authorization: Bearer 你的Key`。
-- 模型名来自模型与价格页，没有手动缩写。
+- 模型名来自 MaoLao API 控制台，没有手动缩写。
 - 当前 Key 的分组支持这个模型。
 - Key 没有发到公开截图、群聊或 GitHub 仓库。
 
@@ -118,6 +118,6 @@ console.log(await response.json());
 | 现象 | 常见原因 | 处理方法 |
 | --- | --- | --- |
 | 返回 `401` | Key 填错、Key 被禁用、没有加 `Bearer` | 重新复制 Key，并检查请求头 |
-| 返回模型不存在 | 模型名拼写错误，或 Key 分组不支持 | 回到模型与价格页复制完整模型名 |
+| 返回模型不存在 | 模型名拼写错误，或 Key 分组不支持 | 回到 MaoLao API 控制台复制完整模型名 |
 | 客户端无法保存 | Base URL 填成了纯域名或填了完整接口路径 | 只填 `https://api.maolaoapi.cc/v1` |
 | 请求很慢 | 当前网络到主域名不稳定 | 切换备用 Base URL 后再测 |

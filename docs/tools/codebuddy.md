@@ -15,7 +15,7 @@ CodeBuddy 是腾讯推出的 AI 代码编辑器，适合做代码解释、补全
 | 需要准备 | 从哪里拿 |
 | --- | --- |
 | MaoLao API Key | MaoLao API 控制台的 API Key 页面 |
-| 模型 ID | MaoLao API 控制台的模型与价格页面 |
+| 模型 ID | MaoLao API 控制台里的完整模型 ID |
 | CodeBuddy 账号 | CodeBuddy 登录页，可用 Google、GitHub 等方式登录 |
 
 ::: tip 新手提醒
@@ -148,7 +148,7 @@ E:\maolaoAPI接入软件\CodeBuddy\CodeBuddy.exe
 
 | 场景 | 建议 |
 | --- | --- |
-| 快速解释代码 | 选择速度快、价格低的模型 |
+| 快速解释代码 | 选择速度快、消耗低的模型 |
 | 重构复杂函数 | 选择代码能力强的模型 |
 | 大文件分析 | 选择上下文更长的模型 |
 | 临时测试 | 使用额度较低的测试 Key |

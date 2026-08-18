@@ -14,7 +14,7 @@ BotGem 是聊天客户端类工具，可以把第三方模型服务添加成 `Se
 | 需要准备 | 从哪里拿 |
 | --- | --- |
 | MaoLao API Key | MaoLao API 控制台的 API Key 页面 |
-| 模型 ID | MaoLao API 控制台的模型与价格页面 |
+| 模型 ID | MaoLao API 控制台里的完整模型 ID |
 | BotGem 桌面版 | BotGem 官网或 Microsoft Store |
 
 ::: tip 新手提醒

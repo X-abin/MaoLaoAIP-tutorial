@@ -15,7 +15,7 @@ CC Switch 用来保存和切换不同 AI 服务商的 API 配置。本页按这�
 
 1. MaoLao API 控制台创建的专用 Key。
 2. MaoLao API 地址：`https://api.maolaoapi.cc/v1`。
-3. MaoLao API“模型与价格”页面中可用的完整模型 ID。
+3. MaoLao API 控制台中可用的完整模型 ID。
 
 ::: warning
 不要把 API Key 写在供应商名称、备注或截图里。Key 只填写在 `API Key` 输入框。
@@ -158,7 +158,7 @@ https://api.maolaoapi.cc/v1
 
 ### 返回模型不存在
 
-第一次配置时先不要做模型映射。进入 MaoLao API“模型与价格”页面，确认当前 Key 分组支持的完整模型 ID。
+第一次配置时先不要做模型映射。进入 MaoLao API 控制台，确认当前 Key 分组支持的完整模型 ID。
 
 ### 添加后调用仍然是旧配置
 

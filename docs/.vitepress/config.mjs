@@ -77,10 +77,6 @@ export default defineConfig({
           { text: "账户问题排查", link: "/account/troubleshooting" },
         ],
       },
-      {
-        text: "项目维护",
-        items: [{ text: "数据来源", link: "/data-sources" }],
-      },
     ],
     outline: {
       label: "本页目录",

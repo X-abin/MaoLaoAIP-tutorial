@@ -10,7 +10,7 @@ Cursor 接入 MaoLao API 后，可以把代码解释、生成、重构等请求�
 ## 准备工作
 
 1. 在 MaoLao API 控制台创建一个 `cursor` 专用 Key。
-2. 在模型与价格页确认你要使用的模型名。
+2. 在 MaoLao API 控制台确认你要使用的模型名。
 3. 打开 Cursor，确认当前版本支持自定义 OpenAI API 或 OpenAI Compatible Provider。
 
 ## 第 1 步：进入模型设置
@@ -56,7 +56,7 @@ Cursor 接入 MaoLao API 后，可以把代码解释、生成、重构等请求�
   </div>
   <div class="ml-field-row">
     <div>Model</div>
-    <div>填写模型与价格页里的完整模型名。</div>
+    <div>填写 MaoLao API 控制台里的完整模型名。</div>
     <div>代码任务优先选择编程能力更强的模型。</div>
   </div>
 </div>
@@ -74,7 +74,7 @@ Cursor 接入 MaoLao API 后，可以把代码解释、生成、重构等请求�
 
 | 使用场景 | 建议 |
 | --- | --- |
-| 日常补全 | 选响应快、价格低的模型 |
+| 日常补全 | 选响应快、消耗低的模型 |
 | 复杂重构 | 选代码能力强、上下文更长的模型 |
 | 多设备使用 | 使用同一个 Cursor 专用 Key，方便查日志 |
 | 团队共享 | 每个人单独 Key，避免费用混在一起 |

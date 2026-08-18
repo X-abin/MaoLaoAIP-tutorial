@@ -30,7 +30,7 @@ NextChat 是一个开源聊天网页应用，可以在浏览器里接入 OpenAI 
 
 1. MaoLao API 控制台创建的 API Key。
 2. MaoLao API 的 OpenAI 兼容接口地址。
-3. “模型与价格”页面里的完整模型 ID。
+3. MaoLao API 控制台里的完整模型 ID。
 
 推荐先使用：
 
@@ -75,7 +75,7 @@ NextChat 不同版本的文字可能不完全一样，但目标都是找到可�
 | --- | --- |
 | API Key | 粘贴 MaoLao API 控制台创建的 Key |
 | Base URL | `https://api.maolaoapi.cc/v1` |
-| 模型 | 从 MaoLao API“模型与价格”页复制完整模型 ID |
+| 模型 | 从 MaoLao API 控制台复制完整模型 ID |
 
 如果网页把 `Base URL` 写成 `API Host`、`API 地址` 或 `接口地址`，也是填写同一个地址。
 
@@ -113,7 +113,7 @@ BASE_URL=https://api.maolaoapi.cc/v1
 | GitHub 只有两个源码包 | 这是正常情况，当前 Release 没有现成 Windows 安装包，直接用网页版 |
 | 网页打不开 | 换浏览器、检查网络，或先确认代理软件是否正常 |
 | 提示 API Key 错误 | 重新复制 MaoLao API Key，检查前后是否有空格 |
-| 提示模型不存在 | 从“模型与价格”页重新复制完整模型 ID |
+| 提示模型不存在 | 从MaoLao API 控制台重新复制完整模型 ID |
 | 提示接口地址错误 | 确认地址包含 `https://`，并按当前控制台要求保留 `/v1` |
 | 配置后没有回复 | 检查模型是否已选中、Key 是否有额度、网页是否仍处于登录或授权状态 |
 

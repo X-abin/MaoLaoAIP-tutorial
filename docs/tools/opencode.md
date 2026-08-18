@@ -15,7 +15,7 @@ OpenCode Desktop 支持在软件内添加“自定义提供商”。本页按照
 
 1. MaoLao API 控制台创建的专用 Key。
 2. API 地址：`https://api.maolaoapi.cc/v1`。
-3. MaoLao API“模型与价格”页面中可用的完整模型 ID。
+3. MaoLao API 控制台中可用的完整模型 ID。
 
 ::: warning
 API Key 只填写在 OpenCode 的 `API 密钥` 输入框。不要把 Key 写入提供商 ID、显示名称、模型名称、截图或项目代码。
@@ -100,7 +100,7 @@ OpenCode 会根据你之后选择的模型自动请求对应接口。
 
 | 真实字段 | 怎么填写 |
 | --- | --- |
-| `model-id` | 填 MaoLao API“模型与价格”页面显示的完整模型 ID。 |
+| `model-id` | 填 MaoLao API 控制台显示的完整模型 ID。 |
 | `显示名称` | 填一个方便识别的名字，例如 `日常代码模型`。 |
 
 如果需要增加多个模型，点击 `+ 添加模型`，每个模型各填一行。

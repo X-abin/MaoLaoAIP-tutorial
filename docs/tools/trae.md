@@ -15,7 +15,7 @@ Trae 是一款 AI 编程工具，适合做代码问答、文件理解、项目�
 | 需要准备 | 从哪里拿 |
 | --- | --- |
 | MaoLao API Key | MaoLao API 控制台的 API Key 页面 |
-| 模型 ID | MaoLao API 控制台的模型与价格页面 |
+| 模型 ID | MaoLao API 控制台里的完整模型 ID |
 | TraeCode | Trae 官方下载中心，Windows 选择 TraeCode |
 
 ::: tip 新手提醒

@@ -16,7 +16,7 @@ Zed Editor 的 AI 功能可以通过 `OpenAI Compatible` 方式接入 MaoLao API
 
 1. MaoLao API 控制台创建的专用 Key。
 2. API 地址：`https://api.maolaoapi.cc/v1`。
-3. MaoLao API“模型与价格”页面中可用的完整模型 ID。
+3. MaoLao API 控制台中可用的完整模型 ID。
 
 ::: warning
 Zed 的 `settings.json` 可以写 API 地址和模型列表，但不要把真实 API Key 明文写进去。
@@ -78,7 +78,7 @@ C:\Users\Administrator\AppData\Roaming\Zed\settings.json
 
 ## 第 4 步：写入 MaoLao API Provider
 
-在 `settings.json` 中加入或修改下面这段。把 `<模型ID>` 换成 MaoLao API 模型与价格页显示的完整模型名。
+在 `settings.json` 中加入或修改下面这段。把 `<模型ID>` 换成 MaoLao API 控制台显示的完整模型名。
 
 ```json
 {
@@ -186,7 +186,7 @@ Zed 的 `settings.json` 不建议放 API Key。新手推荐两种方式：
 
 ### 返回模型不存在
 
-复制 MaoLao API 模型与价格页中的完整模型 ID，替换配置里的 `<模型ID>`。
+复制 MaoLao API 控制台中的完整模型 ID，替换配置里的 `<模型ID>`。
 
 ### 请求地址错误
 
