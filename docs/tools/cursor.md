@@ -8,7 +8,6 @@ Cursor 是 AI 代码编辑器，适合做代码解释、项目问答、代码生
 
 - 官方下载页：[https://cursor.com/download](https://cursor.com/download)
 - 官方自带 API Key 文档：[https://cursor.com/help/models-and-usage/api-keys](https://cursor.com/help/models-and-usage/api-keys)
-- 本机启动路径：`E:\maolaoAPI接入软件\cursor\Cursor.exe`
 - 新手建议：Windows 用户优先从官网下载；如果电脑里已有 Cursor，可以直接从桌面图标启动。
 
 ## 准备工作
