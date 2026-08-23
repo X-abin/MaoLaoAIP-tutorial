@@ -71,6 +71,23 @@ E:\maolaoAPI接入软件\cursor\Cursor.exe
 
 这个页面上方是 Cursor 内置模型开关。接入 MaoLao API 时，不是在这里随便打开模型开关，而是继续向下找到 `API Keys`。
 
+### 看到带锁模型怎么办
+
+如果模型选择器里出现下面这种提示，意思是这个模型属于 Cursor 官方的高级模型，需要购买 Cursor 付费套餐才能使用。
+
+![Cursor 高级模型需要升级套餐提示](/tutorial-shots/cursor-premium-model-locked.png)
+
+这里要分清两件事：
+
+| 你想使用的内容 | 是否需要买 Cursor 套餐 | 说明 |
+| --- | --- | --- |
+| Cursor 自带的带锁高级模型 | 通常需要 | 比如截图里的 `Cursor Grok 4.6 Medium`，提示 `Upgrade to unlock premium models` 就代表要升级 Cursor 套餐。 |
+| MaoLao API Key 接入 | 不一定 | 这是在 Cursor 里填写自己的 `OpenAI API Key` 和 `Override OpenAI Base URL`，请求会走 MaoLao API。 |
+
+::: tip 小白理解
+带锁的是 Cursor 自己提供的模型服务；MaoLao API 是你自己填 Key 和接口地址的接入方式。测试 MaoLao API 时，不要选择带锁的 Cursor 高级模型，优先找 `OpenAI`、自定义 Key、或可以通过 `API Keys` 生效的聊天模型来测试。
+:::
+
 ## 第 4 步：展开 API Keys
 
 在 Models 页面向下看，找到 `API Keys`，点击左侧小箭头展开。
@@ -129,7 +146,9 @@ Cursor 默认可能显示 `https://api.openai.com/v1`。接入 MaoLao API 时，
 
 ## 第 6 步：确认已自动保存
 
-Cursor 这个页面通常没有单独的“保存”按钮。你填完 API Key 和 Base URL 后，按下面方式确认即可：
+Cursor 这个设置页面通常没有单独的“保存”按钮。它更像手机设置页：你把内容填进去后，Cursor 会自动保存。
+
+填完 `OpenAI API Key` 和 `Override OpenAI Base URL` 后，按下面方式确认即可：
 
 1. 点击输入框外面的空白区域，让输入框失去焦点。
 2. 切到左侧其他设置项，例如 `General`。
@@ -138,6 +157,10 @@ Cursor 这个页面通常没有单独的“保存”按钮。你填完 API Key �
 
 ::: tip
 如果切回来发现地址变回 `https://api.openai.com/v1`，说明没有保存成功。重新打开 `Override OpenAI Base URL`，再填写 MaoLao API 地址。
+:::
+
+::: warning
+不要在页面上反复找 `Save`、`保存`、`Apply` 按钮。这个版本的 Cursor 没有这个按钮，只要切走再回来内容还在，就可以继续下一步测试。
 :::
 
 ## 第 7 步：测试
@@ -173,6 +196,8 @@ Cursor 这个页面通常没有单独的“保存”按钮。你填完 API Key �
 | 找不到 Models | 在设置左侧点击 `Models`，或在设置搜索框搜索 `Models` |
 | 找不到 API Keys | 在 Models 页面向下滚动，找到 `API Keys` 并展开 |
 | 找不到 Base URL | 打开 `Override OpenAI Base URL` 右侧开关 |
+| 看到 `Upgrade to unlock premium models` | 这是 Cursor 官方高级模型需要购买套餐，不代表 MaoLao API Key 没配置成功。测试 MaoLao API 时不要选带锁模型。 |
+| 找不到保存按钮 | Cursor 设置会自动保存。填完后点击空白处，切到其他设置页再回来确认内容还在。 |
 | 提示认证失败 | 重新复制 MaoLao API Key，确认没有空格、Key 没有停用 |
 | 提示模型不可用 | 从 MaoLao API 控制台重新复制完整模型 ID，并确认 Key 分组支持 |
 | Tab 补全没有变化 | 正常现象，Cursor 自带 API Key 主要影响聊天模型 |
@@ -189,6 +214,7 @@ Cursor 这个页面通常没有单独的“保存”按钮。你填完 API Key �
 - 已打开 `Override OpenAI Base URL`。
 - Base URL 是 `https://api.maolaoapi.cc/v1`。
 - 切换设置页面再回来后，Base URL 仍然保持 MaoLao API 地址。
+- 没有选择带锁的 Cursor 高级模型来测试 MaoLao API。
 - 模型 ID 来自 MaoLao API 控制台，且没有手动缩写。
 - 已用 Cursor Chat / Agent 发送短消息测试。
 
