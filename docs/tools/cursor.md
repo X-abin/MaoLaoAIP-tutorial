@@ -1,17 +1,15 @@
 # Cursor
 
-Cursor 是 AI 代码编辑器，适合做代码解释、项目问答、代码生成和 Agent 编程。本页根据这台 Windows 电脑上已安装的 Cursor 编写，并加入本机真实启动截图。
+Cursor 是 AI 代码编辑器，适合做代码解释、项目问答、代码生成和 Agent 编程。本页根据这台 Windows 电脑上已登录的 Cursor 真实界面编写。
 
-::: warning
-本机 Cursor 当前停在登录页，登录后才能进入 `Cursor Settings → Models` 配置模型。下面的配置步骤按 Cursor 官方 BYOK 文档和 MaoLao API 接入规则整理；登录后的模型设置截图需要在账号登录完成后继续补充。
-:::
+教程截图只展示 Cursor 设置界面和 MaoLao API Base URL，没有填写或公开任何真实 API Key。
 
 ## 下载地址
 
 - 官方下载页：[https://cursor.com/download](https://cursor.com/download)
 - 官方自带 API Key 文档：[https://cursor.com/help/models-and-usage/api-keys](https://cursor.com/help/models-and-usage/api-keys)
 - 本机启动路径：`E:\maolaoAPI接入软件\cursor\Cursor.exe`
-- 新手建议：Windows 用户优先从官网下载安装包；如果电脑里已有 Cursor，可以直接从桌面图标启动。
+- 新手建议：Windows 用户优先从官网下载；如果电脑里已有 Cursor，可以直接从桌面图标启动。
 
 ## 准备工作
 
@@ -35,45 +33,61 @@ Cursor 官方文档说明，自带 API Key 主要用于聊天模型；Tab 补全
 E:\maolaoAPI接入软件\cursor\Cursor.exe
 ```
 
-打开后，如果看到下面这个页面，说明 Cursor 还没有登录。
+如果看到下面这个页面，说明 Cursor 还没有登录。先点击 `Log In`，按浏览器提示完成账号登录。
 
 ![Cursor 本机登录页真实截图](/tutorial-shots/cursor-live-login.png)
 
-点击 `Log In`，按浏览器中的提示完成账号登录。登录完成后回到 Cursor。
+登录成功后会进入 Cursor 主界面。左侧可以看到 `New Chat`、`Search`、`Automations`、`Customize` 等入口。
+
+![Cursor 登录后主界面真实截图](/tutorial-shots/cursor-live-signed-in.png)
 
 ::: warning
 不要把 MaoLao API Key 填在 Cursor 登录页。登录页只用于登录 Cursor 账号，API Key 要在后面的 Models 设置里填写。
 :::
 
-## 第 2 步：进入 Models 设置
+## 第 2 步：进入 Settings
 
-登录后按下面路径进入模型设置：
+登录后点击左下角账号区域旁边的齿轮图标，进入 Cursor 设置页。
 
-1. 打开 Cursor。
-2. 点击右上角或左下角的设置入口。
-3. 进入 `Cursor Settings`。
-4. 打开 `Models` 页面。
+![Cursor 设置页真实截图](/tutorial-shots/cursor-live-settings-menu.png)
 
-也可以在 Cursor 里按快捷键打开命令面板，搜索：
+进入设置后，左侧会显示这些菜单：
 
-```text
-Cursor Settings
-```
+- `General`
+- `Profile`
+- `Appearance`
+- `Plan & Usage`
+- `Agents`
+- `Cloud Agents`
+- `Models`
 
-再进入 `Models`。
+接入 MaoLao API 要点击左侧的 `Models`。
 
-## 第 3 步：找到 OpenAI API Key
+## 第 3 步：打开 Models 页面
 
-在 `Models` 页面里找到 `API Keys` 或 `OpenAI API Key` 区域。Cursor 官方文档的自带 Key 配置流程是：
+点击 `Models` 后，会看到模型管理页面。这里可以选择哪些模型出现在模型选择器中。
 
-1. 打开 `Cursor Settings → Models`。
-2. 找到要使用的 Provider。
-3. 粘贴 API Key。
-4. 点击保存。
+![Cursor Models 页面真实截图](/tutorial-shots/cursor-live-models.png)
 
-接入 MaoLao API 时，优先使用 `OpenAI` 相关区域，因为 MaoLao API 提供 OpenAI 兼容接口。
+这个页面上方是 Cursor 内置模型开关。接入 MaoLao API 时，不是在这里随便打开模型开关，而是继续向下找到 `API Keys`。
 
-## 第 4 步：填写 MaoLao API
+## 第 4 步：展开 API Keys
+
+在 Models 页面向下看，找到 `API Keys`，点击左侧小箭头展开。
+
+展开后可以看到：
+
+- `OpenAI API Key`
+- `Override OpenAI Base URL`
+- `Anthropic API Key`
+- `Google API Key`
+- `Azure OpenAI`
+
+![Cursor API Keys 区域真实截图](/tutorial-shots/cursor-live-api-keys-fields.png)
+
+接入 MaoLao API 时，使用 `OpenAI API Key` 和 `Override OpenAI Base URL`。
+
+## 第 5 步：填写 MaoLao API
 
 按下面填写：
 
@@ -91,7 +105,12 @@ Cursor Settings
   <div class="ml-field-row">
     <div>Override OpenAI Base URL</div>
     <div><code>https://api.maolaoapi.cc/v1</code></div>
-    <div>如果主地址不稳定，再换 <code>https://api.maolaoapi.com/v1</code>。</div>
+    <div>先打开右侧开关，再把默认地址替换成 MaoLao API 地址。</div>
+  </div>
+  <div class="ml-field-row">
+    <div>备用 Base URL</div>
+    <div><code>https://api.maolaoapi.com/v1</code></div>
+    <div>主地址不稳定时再切换。</div>
   </div>
   <div class="ml-field-row">
     <div>Model</div>
@@ -100,9 +119,15 @@ Cursor Settings
   </div>
 </div>
 
-如果你的 Cursor 版本没有显示 `Override OpenAI Base URL`，先检查是否需要展开 `API Keys` 区域，或升级 Cursor 到新版。
+下图是本机把 `Override OpenAI Base URL` 打开，并填写 MaoLao API 地址后的真实效果。API Key 输入框保持空白，避免泄露密钥。
 
-## 第 5 步：保存并测试
+![Cursor MaoLao Base URL 真实配置截图](/tutorial-shots/cursor-live-maolao-base-url.png)
+
+::: warning
+Cursor 默认可能显示 `https://api.openai.com/v1`。接入 MaoLao API 时，需要把它替换成 `https://api.maolaoapi.cc/v1`，不要保留 OpenAI 官方地址。
+:::
+
+## 第 6 步：保存并测试
 
 保存后不要直接打开大项目测试，先做最小验证：
 
@@ -132,8 +157,9 @@ Cursor Settings
 | 现象 | 处理方法 |
 | --- | --- |
 | 打开后只有登录页 | 先登录 Cursor 账号，再进入 `Cursor Settings → Models` |
-| 找不到 Models | 在设置里搜索 `Models`，或用命令面板搜索 `Cursor Settings` |
-| 找不到 Base URL | 展开 `API Keys`，查找 `Override OpenAI Base URL`，必要时升级 Cursor |
+| 找不到 Models | 在设置左侧点击 `Models`，或在设置搜索框搜索 `Models` |
+| 找不到 API Keys | 在 Models 页面向下滚动，找到 `API Keys` 并展开 |
+| 找不到 Base URL | 打开 `Override OpenAI Base URL` 右侧开关 |
 | 提示认证失败 | 重新复制 MaoLao API Key，确认没有空格、Key 没有停用 |
 | 提示模型不可用 | 从 MaoLao API 控制台重新复制完整模型 ID，并确认 Key 分组支持 |
 | Tab 补全没有变化 | 正常现象，Cursor 自带 API Key 主要影响聊天模型 |
@@ -144,10 +170,10 @@ Cursor Settings
 
 - 已从 Windows 桌面或开始菜单启动 Cursor。
 - 已登录 Cursor 账号。
-- 已进入 `Cursor Settings → Models`。
-- 已找到 `OpenAI API Key` 或 `API Keys` 区域。
+- 已进入设置页，并点击左侧 `Models`。
+- 已展开 `API Keys`。
 - API Key 填写的是 MaoLao API 控制台创建的 Key。
-- 已开启或填写 `Override OpenAI Base URL`。
+- 已打开 `Override OpenAI Base URL`。
 - Base URL 是 `https://api.maolaoapi.cc/v1`。
 - 模型 ID 来自 MaoLao API 控制台，且没有手动缩写。
 - 已用 Cursor Chat / Agent 发送短消息测试。
