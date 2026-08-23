@@ -127,9 +127,22 @@ E:\maolaoAPI接入软件\cursor\Cursor.exe
 Cursor 默认可能显示 `https://api.openai.com/v1`。接入 MaoLao API 时，需要把它替换成 `https://api.maolaoapi.cc/v1`，不要保留 OpenAI 官方地址。
 :::
 
-## 第 6 步：保存并测试
+## 第 6 步：确认已自动保存
 
-保存后不要直接打开大项目测试，先做最小验证：
+Cursor 这个页面通常没有单独的“保存”按钮。你填完 API Key 和 Base URL 后，按下面方式确认即可：
+
+1. 点击输入框外面的空白区域，让输入框失去焦点。
+2. 切到左侧其他设置项，例如 `General`。
+3. 再回到 `Models → API Keys`。
+4. 如果 `Override OpenAI Base URL` 仍然是开启状态，并且地址仍显示 `https://api.maolaoapi.cc/v1`，就说明已经保存。
+
+::: tip
+如果切回来发现地址变回 `https://api.openai.com/v1`，说明没有保存成功。重新打开 `Override OpenAI Base URL`，再填写 MaoLao API 地址。
+:::
+
+## 第 7 步：测试
+
+确认保存后不要直接打开大项目测试，先做最小验证：
 
 1. 打开一个很小的项目或新建空文件。
 2. 按 `Ctrl + L` 打开 Cursor Chat。
@@ -175,6 +188,7 @@ Cursor 默认可能显示 `https://api.openai.com/v1`。接入 MaoLao API 时，
 - API Key 填写的是 MaoLao API 控制台创建的 Key。
 - 已打开 `Override OpenAI Base URL`。
 - Base URL 是 `https://api.maolaoapi.cc/v1`。
+- 切换设置页面再回来后，Base URL 仍然保持 MaoLao API 地址。
 - 模型 ID 来自 MaoLao API 控制台，且没有手动缩写。
 - 已用 Cursor Chat / Agent 发送短消息测试。
 
