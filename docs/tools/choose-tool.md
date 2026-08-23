@@ -7,7 +7,7 @@
 | 你想做什么 | 建议先看 | 为什么 |
 | --- | --- | --- |
 | 日常聊天、翻译、总结 | [Chatbox](/tools/chatbox) 或 [Cherry Studio](/tools/cherry-studio) | 界面直观，适合第一次配置 API Key |
-| 写代码、改项目 | [Claude Code](/tools/claude-code)、[Codex CLI](/tools/codex-cli)、[OpenCode](/tools/opencode) | 更适合在项目目录里处理代码 |
+| 写代码、改项目 | [Cursor](/tools/cursor)、[Claude Code](/tools/claude-code)、[Codex CLI](/tools/codex-cli)、[OpenCode](/tools/opencode) | 更适合在项目目录里处理代码 |
 | 在 VS Code 里用 AI | [Cline](/tools/cline) | 不需要换编辑器，直接在 VS Code 里配置 |
 | 配多个模型和服务商 | [Cherry Studio](/tools/cherry-studio) 或 [LobeHub](/tools/lobehub) | 适合管理多个 Provider 和模型 |
 | 想先验证 Key 是否能用 | [OpenAI Compatible](/tools/openai-compatible) | 最通用，能快速排查 Base URL、Key、模型名 |

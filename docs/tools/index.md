@@ -51,6 +51,7 @@
 | Codex CLI | [Codex CLI 官方文档](https://developers.openai.com/codex/cli/) / [GitHub](https://github.com/openai/codex) | 先看官方文档，再按系统安装 |
 | OpenCode | [opencode.ai](https://opencode.ai) / [GitHub](https://github.com/sst/opencode) | 适合命令行或代码智能体场景 |
 | Cherry Studio | [GitHub Releases](https://github.com/CherryHQ/cherry-studio/releases) | 下载最新稳定版 |
+| Cursor | [cursor.com/download](https://cursor.com/download) | 适合代码编辑器和 Agent 场景；需要先登录 Cursor 账号 |
 | Chatbox | [chatboxai.app](https://chatboxai.app/en) | 官网会提供 Windows、macOS、Linux 和移动端 |
 | GitHub Copilot | [官方快速开始](https://docs.github.com/copilot/get-started/quickstart) | 不能直接填写 MaoLao API Key |
 | Zed Editor | [zed.dev/download](https://zed.dev/download) | 安装后在设置里找 AI / Provider |
@@ -76,6 +77,7 @@
 | Codex CLI | [Codex CLI](/tools/codex-cli) |
 | OpenCode | [OpenCode](/tools/opencode) |
 | Cherry Studio | [Cherry Studio](/tools/cherry-studio) |
+| Cursor | [Cursor](/tools/cursor) |
 | Chatbox | [Chatbox](/tools/chatbox) |
 | GitHub Copilot | [GitHub Copilot](/tools/github-copilot) |
 | Zed Editor | [Zed Editor](/tools/zed-editor) |
