@@ -81,7 +81,7 @@ export default defineConfig({
       },
     ],
     outline: {
-      label: "本页目录",
+      label: "当前章节",
       level: [2, 3],
     },
     docFooter: {
