@@ -50,6 +50,7 @@
 | Claude Coworks | [Claude 官网](https://claude.com) / [下载页](https://claude.com/download) | 更新到支持开发者模式和第三方推理供应商的版本 |
 | Codex CLI | [Codex CLI 官方文档](https://developers.openai.com/codex/cli/) / [GitHub](https://github.com/openai/codex) | 先看官方文档，再按系统安装 |
 | OpenCode | [opencode.ai](https://opencode.ai) / [GitHub](https://github.com/sst/opencode) | 适合命令行或代码智能体场景 |
+| Paseo | [paseo.sh](https://paseo.sh) / [下载页](https://paseo.sh/download) | 统一管理 Claude Code、Codex、OpenCode 等本机 Agent Provider |
 | Cherry Studio | [GitHub Releases](https://github.com/CherryHQ/cherry-studio/releases) | 下载最新稳定版 |
 | Cursor | [cursor.com/download](https://cursor.com/download) | 适合代码编辑器和 Agent 场景；需要先登录 Cursor 账号 |
 | Chatbox | [chatboxai.app](https://chatboxai.app/en) | 官网会提供 Windows、macOS、Linux 和移动端 |
@@ -76,6 +77,7 @@
 | Claude Coworks | [Claude Coworks](/tools/claude-cowork) |
 | Codex CLI | [Codex CLI](/tools/codex-cli) |
 | OpenCode | [OpenCode](/tools/opencode) |
+| Paseo | [Paseo](/tools/paseo) |
 | Cherry Studio | [Cherry Studio](/tools/cherry-studio) |
 | Cursor | [Cursor](/tools/cursor) |
 | Chatbox | [Chatbox](/tools/chatbox) |

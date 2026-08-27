@@ -44,6 +44,7 @@ export default defineConfig({
           { text: "Codex CLI", link: "/tools/codex-cli" },
           { text: "CC Switch", link: "/tools/cc-switch" },
           { text: "OpenCode", link: "/tools/opencode" },
+          { text: "Paseo", link: "/tools/paseo" },
           { text: "Cherry Studio", link: "/tools/cherry-studio" },
           { text: "Cursor", link: "/tools/cursor" },
           { text: "GitHub Copilot", link: "/tools/github-copilot" },

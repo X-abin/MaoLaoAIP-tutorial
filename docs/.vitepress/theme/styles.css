@@ -205,6 +205,11 @@ body {
   background-image: url("/tool-icons/opencode.png");
 }
 
+.VPSidebarItem.level-1 .link[href*="/tools/paseo"] .text::before {
+  content: "";
+  background-image: url("/tool-icons/paseo.ico");
+}
+
 .VPSidebarItem.level-1 .link[href*="/tools/zed-editor"] .text::before {
   content: "";
   background-image: url("/tool-icons/zed-editor.png");
